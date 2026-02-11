@@ -98,7 +98,7 @@ export const siteConfig = {
     socialProof: {
         items: [
             "SprintMob · GTM complet, segmentation AI, prospection ciblée",
-            "Imrane Dessai · Système end-to-end : ads, landing, sales, setting, closing",
+            "Imrane Dessai · Closing",
             "StarsBridge System · Closing structuré, business partner revenue",
         ],
     },
@@ -327,7 +327,7 @@ export const siteConfig = {
             },
             {
                 q: "Quel est ton background ?",
-                a: "10 ans de développement et de construction de systèmes tech. Puis une reconversion complète en vente, sales ops et marketing, payant et organique. J'ai construit des systèmes GTM pour SprintMob, un pipeline end-to-end pour Imrane Dessai, et je suis business partner revenue pour StarsBridge System.",
+                a: "10 ans de développement et de construction de systèmes tech. Puis une reconversion complète en vente, sales ops et marketing, payant et organique. J'ai construit des systèmes GTM pour SprintMob, le closing pour Imrane Dessai, et je suis business partner revenue pour StarsBridge System.",
             },
             {
                 q: "Et si j'ai déjà un closer ?",
