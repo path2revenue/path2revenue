@@ -64,7 +64,7 @@ export const siteConfig = {
         highlightedText: "De Vente",
         headlineEnd: "Ensemble.",
         subheadline:
-            'Tu as déjà vendu ton offre. Tu sais que ça marche. Maintenant, il te faut <strong>le système pour scaler</strong> : process, pipeline, automatisations, closing. On le construit ensemble en 90 jours.',
+            'Tu as déjà vendu ton offre. Tu sais que ça marche. Maintenant, il te faut <strong>le système pour scaler</strong>. Process, pipeline, closing, outils adaptés à ton cas. On le construit ensemble en 90 jours.',
         vslUrl: null,
         vslTitle: null,
         ctas: [
@@ -169,9 +169,9 @@ export const siteConfig = {
             },
             {
                 metric: "Auto",
-                label: "Automatisations Essentielles",
-                description: "Lead entrant → CRM → scoring → action suivante. Relances automatiques, récupération no-show, deadlines. Ce qui protège ton revenu tourne tout seul.",
-                badge: "Zéro fuite",
+                label: "Outils & Automatisations",
+                description: "Les bons outils, adaptés à ton offre, ton budget et ton volume. Relances, suivi, scoring. Ce qui protège ton revenu tourne tout seul.",
+                badge: "Sur mesure",
             },
             {
                 metric: "Close",
@@ -195,7 +195,7 @@ export const siteConfig = {
         highlightedText: "Ensemble",
         headlineEnd: "",
         subtitle:
-            "Chaque brique est pensée pour une seule chose : que tes encaissements deviennent réguliers, mesurables et reproductibles.",
+            "Chaque brique est adaptée à ton offre, ton marché et ton budget. L'objectif : des encaissements réguliers, mesurables et reproductibles.",
         items: [
             {
                 icon: "target",
@@ -206,10 +206,10 @@ export const siteConfig = {
             },
             {
                 icon: "zap",
-                title: "Automatisations Essentielles",
+                title: "Outils & Automatisations",
                 description:
-                    "Lead entrant → CRM → scoring → action. Relances auto par statut. Récupération no-show. Relances no-decision avec deadlines. Zéro fuite, zéro oubli.",
-                badge: "Protection revenu",
+                    "On choisit ensemble les outils adaptés à ton offre, ton budget et ton cas. CRM, relances, scoring, suivi. Le système est taillé pour toi, pas l'inverse.",
+                badge: "Sur mesure",
             },
             {
                 icon: "phone-call",
@@ -307,7 +307,7 @@ export const siteConfig = {
         items: [
             {
                 q: "C'est pour qui exactement ?",
-                a: "Entrepreneurs et indépendants qui ont déjà vendu leur offre au moins une fois. High-ticket B2B ou B2C, cycle court. Tu sais que ton offre marche. Il te manque le système pour que les ventes soient régulières, pas juste ponctuelles.",
+                a: "Entrepreneurs, indépendants ou SaaS qui ont déjà vendu leur offre au moins une fois. High-ticket B2B ou B2C, cycle court. Tu sais que ton offre marche. Il te manque le système pour que les ventes soient régulières, pas juste ponctuelles.",
             },
             {
                 q: "Et si je n'ai pas encore de flux de leads ?",
