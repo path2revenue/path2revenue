@@ -9,8 +9,8 @@ export default function SocialProof() {
     const doubled = [...socialProof.items, ...socialProof.items];
 
     return (
-        <section className="py-6 overflow-hidden border-y border-[var(--color-border-default)] bg-[var(--color-bg-surface)]/50">
-            <div className="flex animate-[marquee_30s_linear_infinite] whitespace-nowrap">
+        <section className="py-8 overflow-hidden border-y border-[var(--color-border-default)] bg-[var(--color-bg-surface)]/50">
+            <div className="flex animate-[marquee_35s_linear_infinite] whitespace-nowrap">
                 {doubled.map((item, i) => {
                     const isObj = typeof item === "object";
                     const text = isObj ? item.text : item;
@@ -19,15 +19,15 @@ export default function SocialProof() {
                     return (
                         <span
                             key={i}
-                            className="inline-flex items-center gap-3 mx-8 text-sm text-[var(--color-text-secondary)] font-medium shrink-0"
+                            className="inline-flex items-center gap-4 mx-10 text-base text-[var(--color-text-secondary)] font-medium shrink-0"
                         >
                             {img && (
                                 <img
                                     src={img}
                                     alt={text.split("·")[0]?.trim() || "client"}
-                                    width={28}
-                                    height={28}
-                                    className="rounded-full object-cover w-7 h-7"
+                                    width={36}
+                                    height={36}
+                                    className="rounded-full object-cover w-9 h-9 ring-1 ring-[var(--color-border-default)]"
                                 />
                             )}
                             {text}
