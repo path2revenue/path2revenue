@@ -100,6 +100,7 @@ export const siteConfig = {
             "SprintMob · GTM complet, segmentation AI, prospection ciblée",
             "Imrane Dessai · Closing",
             "StarsBridge System · Closing structuré, business partner revenue",
+            "Novashield · Acquisition, clarification d'offre et process",
         ],
     },
 
