@@ -7,7 +7,7 @@ import SectionHeader from "./SectionHeader";
 
 const layout = siteConfig.design?.layout || "centered";
 const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
-const gridCols = layout === "editorial" ? "md:grid-cols-2" : layout === "minimal" ? "md:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-4";
+const gridCols = layout === "editorial" ? "md:grid-cols-2" : layout === "minimal" ? "md:grid-cols-2 lg:grid-cols-3" : "md:grid-cols-2 lg:grid-cols-3";
 const badgeRadius = layout === "editorial" ? "rounded-md" : "rounded-full";
 
 export default function Services() {
