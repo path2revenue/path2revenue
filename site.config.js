@@ -150,6 +150,12 @@ export const siteConfig = {
         highlightedText: "Complet",
         items: [
             {
+                metric: "Offre",
+                label: "Offre, ICP & Canaux",
+                description: "Revue de ton offre, définition de ton client idéal, choix des canaux adaptés à ton cas. On pose la stratégie avant de construire.",
+                badge: "Stratégie",
+            },
+            {
                 metric: "J+14",
                 label: "Système en Production",
                 description: "Pipeline opérationnel, tracking KPI en place, automatisations actives, cadence lancée. Garanti, sinon on prolonge gratuitement.",
@@ -224,6 +230,13 @@ export const siteConfig = {
                 description:
                     "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. On voit ce qui produit du revenu et ce qui n'en produit pas.",
                 badge: "Visibilité",
+            },
+            {
+                icon: "compass",
+                title: "Offre, ICP & Canaux",
+                description:
+                    "On revoit ton offre, ton client idéal et les canaux les plus adaptés à ton cas. Positionnement clair, segmentation précise, stratégie d'acquisition définie. Tout part de là.",
+                badge: "Stratégie",
             },
             {
                 icon: "rocket",
