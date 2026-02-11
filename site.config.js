@@ -1,24 +1,24 @@
 /** ============================================================
  *  SITE CONFIG — PATH2REVENUE (Clearpath Systems)
  *  ============================================================
+ *  Bilal EL-JINDI — Business Partner Revenue
  *  Partnership 90 jours — Sales OS Complet
- *  Du Lead à l'Encaissement
  *  ============================================================ */
 
 const WA_NUMBER = "33761941267";
 const WA_MESSAGE = (ctx) =>
-    `Bonjour, je viens du site ${ctx} et j'aimerais valider mon éligibilité pour le Partnership 90 jours.`;
+    `Bonjour Bilal, je viens du site ${ctx} et j'aimerais en savoir plus sur le Partnership 90 jours.`;
 
 export const siteConfig = {
     /* ─────────────────── META & SEO ─────────────────── */
     meta: {
-        title: "Path2Revenue | Partnership 90 Jours — Sales OS Complet",
+        title: "Path2Revenue — Ton Système de Vente Complet en 90 Jours",
         description:
-            "On met en place et on opère ton système de vente complet : process, pipeline, automatisations, closing, KPIs. En 90 jours, ta machine revenue est opérationnelle.",
+            "Je construis et j'opère ton système de vente complet : process, pipeline, automatisations, closing, KPIs. En 90 jours, ta machine revenue est opérationnelle.",
         keywords:
-            "sales OS, système de vente, closing, pipeline, automatisation CRM, B2B high-ticket, revenue, acquisition, Clearpath Systems, Path2Revenue",
-        ogTitle: "Path2Revenue | Partnership 90 Jours",
-        ogDescription: "Sales OS complet en 90 jours. Process + automatisations + closing + pilotage KPI.",
+            "sales OS, système de vente, closing, pipeline, automatisation CRM, B2B high-ticket, revenue, acquisition, Clearpath Systems, Path2Revenue, Bilal EL-JINDI",
+        ogTitle: "Path2Revenue — Partnership 90 Jours",
+        ogDescription: "Ton Sales OS complet en 90 jours. Process + automatisations + closing + pilotage.",
         ogImage: null,
         lang: "fr",
         favicon: "🎯",
@@ -48,34 +48,34 @@ export const siteConfig = {
     navbar: {
         logo: { text: "Path2Revenue", emoji: "🎯" },
         links: [
-            { label: "Problème", href: "#probleme" },
-            { label: "Sales OS", href: "#services" },
-            { label: "Méthode", href: "#methode" },
+            { label: "Le Problème", href: "#probleme" },
+            { label: "Comment Ça Marche", href: "#methode" },
+            { label: "Le Système", href: "#services" },
             { label: "Garanties", href: "#honesty" },
             { label: "FAQ", href: "#faq" },
         ],
-        cta: { text: "Valider Mon Éligibilité", href: "#rdv" },
+        cta: { text: "Réserver un Appel", href: "#rdv" },
     },
 
     /* ─────────────────── HERO ─────────────────── */
     hero: {
-        eyebrow: { text: "Clearpath Systems — Partnership 90 Jours", dot: true },
-        headline: "Un Chemin Clair Vers",
-        highlightedText: "L'Encaissement",
-        headlineEnd: "Système + Automatisations + Closing.",
+        eyebrow: { text: "Partnership 90 Jours — Sales OS Complet", dot: true },
+        headline: "Je Construis Ton Système",
+        highlightedText: "D'Acquisition",
+        headlineEnd: "De A à Z. Du Lead à l'Encaissement.",
         subheadline:
-            'Mettre fin au "feeling" et construire une machine simple qui <strong>traite les leads vite, qualifie correctement, relance automatiquement et convertit avec une structure de closing claire</strong>.',
+            'Pas de promesses floues. Pas d\'automatisation prématurée. <strong>Un vrai système de vente</strong> — process, pipeline, automatisations, closing — construit, testé et livré en 90 jours.',
         vslUrl: null,
         vslTitle: null,
         ctas: [
             {
-                text: "Valider Mon Éligibilité",
+                text: "Réserver Mon Appel Diagnostic",
                 href: "#rdv",
                 style: "primary",
                 arrow: true,
             },
             {
-                text: "Échanger sur WhatsApp",
+                text: "M'écrire sur WhatsApp",
                 href: "__whatsapp__",
                 style: "secondary",
                 icon: "whatsapp",
@@ -83,101 +83,101 @@ export const siteConfig = {
         ],
         stats: [
             { value: 90, suffix: " jours", label: "pour un système opérationnel" },
-            { value: 14, suffix: "j", label: "système en production garanti" },
-            { value: 0, suffix: " fuite", label: "de lead — garanti à J+30" },
-            { value: 3, suffix: " options", label: "closing : on close, on forme, on place" },
+            { value: 14, suffix: "j", label: "système livré — garanti" },
+            { value: 0, suffix: " fuite", label: "de lead dès J+30" },
+            { value: 3, suffix: " options", label: "de closing flexibles" },
         ],
         trustBadges: [
             "Appel diagnostic gratuit",
-            "Rémunération alignée (Success Fee)",
-            "Garantie système livré",
+            "Rémunération sur résultat",
+            "Système livré — garanti",
         ],
     },
 
     /* ─────────────────── SOCIAL PROOF ─────────────────── */
     socialProof: {
         items: [
-            "⚙️ Sales OS complet livré",
-            "🤖 Automatisations zéro fuite",
-            "📊 Dashboard KPI intégré",
-            "🎯 Closing structuré",
-            "🔁 Process reproductible et transmissible",
+            "⚙️ Sales OS complet en 90 jours",
+            "🤖 Automatisations sans fuite",
+            "📊 KPIs clairs et actionnables",
+            "🎯 Closing structuré et flexible",
+            "📋 Système transmissible (SOP incluses)",
         ],
     },
 
     /* ─────────────────── PAIN POINTS ─────────────────── */
     painPoints: {
-        eyebrow: "Le Vrai Problème",
+        eyebrow: "Tu Te Reconnais ?",
         headline: "Tu Vends Au",
         highlightedText: "Feeling",
         highlightColor: "danger",
         subtitle:
-            "Des outils, des automatisations, des 'stratégies'… mais le vrai sujet reste le même : comment une conversation devient un encaissement.",
+            "Des outils, des 'stratégies', peut-être même des automatisations… Mais le vrai sujet reste le même : tu n'as pas de système clair pour transformer une conversation en encaissement.",
         items: [
             {
                 icon: "🎲",
                 title: "Tes leads sont traités au feeling",
                 description:
-                    "Pas de CRM propre, pas de pipeline clair, pas de règles de qualification. Chaque lead suit un chemin différent et tu perds des deals sans même le savoir.",
+                    "Pas de pipeline clair, pas de règles de qualification, pas de process. Chaque lead suit un chemin différent — et tu perds des deals sans même t'en rendre compte.",
                 stat: "Feeling ≠ Système",
             },
             {
                 icon: "📉",
-                title: "Ton CA est imprévisible mois après mois",
+                title: "Ton CA est imprévisible",
                 description:
-                    "Certains mois tu signes, d'autres non. Aucune visibilité sur le pipeline. Tu ne sais pas d'où viendra le prochain encaissement. Le revenu n'est pas pilotable.",
-                stat: "0 KPI = 0 prévisibilité",
+                    "Certains mois tout roule, d'autres c'est le vide. Aucune visibilité, aucun KPI. Tu ne sais pas d'où viendra le prochain encaissement — ni quand.",
+                stat: "0 visibilité = 0 croissance",
             },
             {
                 icon: "💸",
                 title: "Des leads tombent entre les mailles",
                 description:
-                    "No-show non relancés, follow-ups oubliés, no-decision qui traînent. Chaque lead perdu, c'est du CA qui s'évapore. Et tu ne le mesures même pas.",
-                stat: "Chaque fuite = argent perdu",
+                    "No-show non relancés, follow-ups oubliés, prospects indécis qui traînent. Chaque lead perdu, c'est de l'argent qui s'évapore — et tu ne le mesures même pas.",
+                stat: "Chaque fuite = CA perdu",
             },
         ],
     },
 
     /* ─────────────────── RESULTS ─────────────────── */
     results: {
-        eyebrow: "Ce Qu'on Livre",
-        headline: "Un Sales OS",
+        eyebrow: "Ce Que Je Livre",
+        headline: "Ton Sales OS",
         highlightedText: "Complet",
         items: [
             {
                 metric: "J+14",
-                label: "Système en Production — Garanti",
-                description: "Pipeline opérationnel, tracking KPI en place, automatisations essentielles actives, cadence lancée.",
-                badge: "Garantie 1",
+                label: "Système en Production",
+                description: "Pipeline opérationnel, tracking KPI en place, automatisations essentielles actives, cadence lancée. Si ce n'est pas livré : je prolonge gratuitement.",
+                badge: "Garanti",
             },
             {
                 metric: "J+30",
-                label: "Zéro Fuite — Garanti",
-                description: "Aucun lead laissé sans statut. Tout lead est soit avancé, relancé, ou disqualifié (raison notée).",
-                badge: "Garantie 2",
+                label: "Zéro Fuite de Lead",
+                description: "Chaque lead a un statut clair : avancé, relancé, ou disqualifié avec raison. Plus un seul prospect \"oublié\" dans un coin.",
+                badge: "Garanti",
             },
             {
                 metric: "CRM",
-                label: "Pipeline + Qualification + Scripts",
-                description: "Stages clairs, règles no-show / no-decision / stalled deals, dashboard KPI (activité → calls → encaissements).",
+                label: "Pipeline + Scripts + Qualification",
+                description: "Des stages clairs, des règles de no-show / no-decision, des scripts de call et follow-up. Tout est documenté, tout est exploitable.",
                 badge: "Process",
             },
             {
                 metric: "Auto",
                 label: "Automatisations Essentielles",
-                description: "Lead entrant → CRM → scoring → next step. Relances automatiques, récupération no-show, handoff structuré.",
+                description: "Lead entrant → CRM → scoring → action suivante. Relances automatiques, récupération no-show, deadlines. Ce qui protège ton revenu tourne tout seul.",
                 badge: "Zéro fuite",
             },
             {
                 metric: "Close",
-                label: "Conversion & Closing (Flexible)",
-                description: "On close pour toi, on forme ton closer, ou on place un closer. La machine tourne avec ou sans toi.",
-                badge: "Revenu",
+                label: "Closing Structuré",
+                description: "Je close pour toi, je forme ton closer, ou je place un closer. L'objectif : que ta machine tourne avec ou sans toi, sans dépendre d'une seule personne.",
+                badge: "Flexible",
             },
             {
                 metric: "SOP",
                 label: "Système Transmissible",
-                description: "À J+90 : SOP finalisées, système stable et scalable. Autonomie ou retainer, tu choisis.",
+                description: "À J+90 : SOP finalisées, système stable. Tu reprends la main en autonomie, tu passes en retainer, ou tu continues en partnership. Tu choisis.",
                 badge: "Autonomie",
             },
         ],
@@ -185,46 +185,46 @@ export const siteConfig = {
 
     /* ─────────────────── SERVICES ─────────────────── */
     services: {
-        eyebrow: "Le Sales OS Path2Revenue",
-        headline: "Ce Qu'on Met",
+        eyebrow: "Le Système Path2Revenue",
+        headline: "Ce Que Je Mets",
         highlightedText: "En Place",
         headlineEnd: "Pour Toi",
         subtitle:
-            "Un système complet, pas un outil de plus. Chaque brique s'intègre pour une seule chose : des encaissements réguliers, mesurables et reproductibles.",
+            "Chaque brique est pensée pour une seule chose : que tes encaissements deviennent réguliers, mesurables et reproductibles. Pas un outil de plus — un système complet.",
         items: [
             {
                 icon: "Target",
-                title: "1. Process Clair (Le Cœur)",
+                title: "Process de Vente Clair",
                 description:
-                    "CRM + pipeline (stages + règles), qualifications + disqualifiers, scripts (call + follow-up + recadrage), dashboard KPI.",
+                    "CRM + pipeline avec des stages et règles précises. Qualification, disqualification, scripts de call et de recadrage. Tu sais exactement quoi faire à chaque étape.",
                 badge: "Fondation",
             },
             {
                 icon: "Zap",
-                title: "2. Automatisations Essentielles",
+                title: "Automatisations Essentielles",
                 description:
-                    "Lead entrant → CRM → scoring → next step. Tâches + relances automatiques. Récupération no-show. Relances no-decision + deadlines.",
-                badge: "Zéro fuite",
+                    "Lead entrant → CRM → scoring → action. Relances automatiques par statut. Récupération no-show. Relances no-decision avec deadlines. Zéro fuite, zéro oubli.",
+                badge: "Protection revenu",
             },
             {
                 icon: "Phone",
-                title: "3. Conversion & Closing",
+                title: "Conversion & Closing",
                 description:
-                    "On close (closer Clearpath), on forme ton closer (structure + QA), ou on place un closer (sélection + onboarding + process). Flexible.",
+                    "Selon ton besoin : je close moi-même, je forme ton closer (structure + QA), ou je te trouve et onboard un closer. L'objectif : une conversion stable qui ne dépend pas d'un héros.",
                 badge: "Revenu direct",
                 span: 2,
             },
             {
                 icon: "BarChart3",
-                title: "4. Pilotage KPI",
+                title: "Pilotage KPI",
                 description:
-                    "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. Tu sais exactement ce qui produit du revenu.",
+                    "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. Tu vois ce qui produit du revenu — et ce qui n'en produit pas.",
             },
             {
                 icon: "FileText",
-                title: "5. SOP & Transmission",
+                title: "SOP & Transmission",
                 description:
-                    "Le système est conçu pour être transmis. Documentation, formation, autonomie. Tu ne dépends pas de nous.",
+                    "Le système est conçu pour être transmis à ton équipe. Documentation complète, formation, autonomie. Tu ne dépends pas de moi.",
                 badge: "Différenciateur",
             },
         ],
@@ -232,59 +232,59 @@ export const siteConfig = {
 
     /* ─────────────────── PROCESS ─────────────────── */
     process: {
-        eyebrow: "La Méthode",
-        headline: "Médecin D'abord,",
-        highlightedText: "Chirurgien Ensuite",
+        eyebrow: "Ma Méthode",
+        headline: "D'abord Comprendre,",
+        highlightedText: "Ensuite Construire",
         steps: [
             {
                 number: "01",
                 title: "Build & Launch — J1 à J14",
                 description:
-                    "Diagnostic + plan. Setup CRM/pipeline. Scripts + qualification. Automatisations essentielles. Lancement du flux. Système en production garanti.",
+                    "Diagnostic complet + plan d'action. Setup CRM et pipeline. Scripts + qualification. Automatisations essentielles. Lancement du premier flux. Ton système est en production.",
             },
             {
                 number: "02",
                 title: "Pilot & Proof — J15 à J45",
                 description:
-                    "Exécution + itérations hebdo. Optimisation relances / show rate / conversion. Nettoyage pipeline + règles strictes. Suivi KPI hebdo.",
+                    "Exécution terrain + itérations chaque semaine. Optimisation des relances, du show rate, de la conversion. Nettoyage du pipeline. Suivi KPI hebdomadaire ensemble.",
             },
             {
                 number: "03",
                 title: "Scale & Handoff — J46 à J90",
                 description:
-                    "SOP finalisées. Système stable et scalable. Transition closing (former/placer). Autonomie ou retainer — tu choisis.",
+                    "SOP finalisées. Système stable et scalable. Transition du closing si nécessaire. Passation complète ou continuation en retainer — c'est toi qui décides.",
             },
         ],
     },
 
     /* ─────────────────── HONESTY ─────────────────── */
     honesty: {
-        eyebrow: "Notre Ligne Rouge",
-        headline: "On Ne Vend Pas",
-        highlightedText: "Un Rêve",
+        eyebrow: "Ma Ligne Rouge",
+        headline: "Je Ne Vends Pas",
+        highlightedText: "De Rêves",
         paragraphs: [
-            "On vend un système + une exécution. On ne garantit pas un chiffre de CA — ce serait malhonnête si on ne contrôle pas l'offre, le pricing, le marché et la réactivité.",
-            "En revanche, on garantit : le système en production (J+14), zéro fuite de lead (J+30), et un process mesurable et pilotable.",
-            "Notre rémunération est alignée : Launch Fee pour enclencher la machine + Success Fee sur encaissement réel. On gagne quand il y a du revenu, pas quand on \"travaille plus\".",
+            "Je ne vais pas te promettre \"100 clients en 30 jours\". Ce serait malhonnête — et surtout, ça ne fonctionne pas comme ça.",
+            "Ce que je fais : je construis un système de vente complet, je le teste sur le terrain, et je te le livre opérationnel. Avec des garanties concrètes : système en production à J+14, zéro fuite de lead à J+30.",
+            "Ma rémunération est alignée sur tes résultats : un Launch Fee pour démarrer la machine + un Success Fee sur encaissement réel. Je gagne quand tu encaisses. Pas avant.",
         ],
-        signature: { name: "Clearpath Systems", role: "Path2Revenue Partnership" },
+        signature: { name: "Bilal EL-JINDI", role: "Fondateur, Path2Revenue" },
     },
 
     /* ─────────────────── CALENDAR ─────────────────── */
     calendar: {
-        eyebrow: "Prochaine Étape",
-        headline: "Valider Ton",
-        highlightedText: "Éligibilité",
+        eyebrow: "Prêt à Avancer ?",
+        headline: "Réserve Ton",
+        highlightedText: "Appel Diagnostic",
         subtitle:
-            "30 minutes pour cadrer ta situation : offre, pipeline, leads, cycle de vente. On te dit honnêtement si on peut t'aider — ou pas.",
+            "30 minutes ensemble pour comprendre ta situation, identifier ce qui bloque et voir si je peux t'aider. Si je ne suis pas le bon fit, je te le dis — sans tourner autour du pot.",
         benefits: [
-            "Offre + ticket moyen analysés",
-            "Source de leads identifiée",
-            "Volume actuel évalué (leads/calls semaine)",
-            "Cycle moyen de décision cadré",
+            "Analyse de ta situation actuelle (offre, pipeline, leads)",
+            "Identification des premiers leviers de revenu",
+            "Plan d'action clair si ça matche",
+            "Honnêteté totale — si je ne peux pas t'aider, je te le dis",
         ],
-        whatsappCopy: "Tu préfères un échange direct ?",
-        whatsappLabel: "Discutons sur WhatsApp →",
+        whatsappCopy: "Tu préfères qu'on échange directement ?",
+        whatsappLabel: "Écris-moi sur WhatsApp →",
     },
 
     /* ─────────────────── FAQ ─────────────────── */
@@ -294,32 +294,32 @@ export const siteConfig = {
         highlightedText: "Fréquentes",
         items: [
             {
-                q: "Concrètement, qu'est-ce qu'on achète ?",
-                a: "Un Sales OS complet mis en place et opéré pendant 90 jours : process de vente clair (CRM, pipeline, qualification, scripts), automatisations essentielles (relances, no-show, no-decision), pilotage KPI et structure de closing.",
+                q: "Concrètement, qu'est-ce que j'achète ?",
+                a: "Un Sales OS complet, construit et opéré pendant 90 jours. Ça inclut : process de vente (CRM, pipeline, qualification, scripts), automatisations essentielles (relances, no-show, no-decision), pilotage KPI et structure de closing.",
             },
             {
-                q: "Est-ce que vous garantissez un chiffre (X ventes / X CA) ?",
-                a: "Non, et c'est volontaire : on ne contrôle pas l'offre, le marché ni la réactivité. En revanche, on garantit le système en production (J+14) et l'absence de fuite de lead (J+30). Les résultats deviennent la conséquence logique d'un process maîtrisé.",
+                q: "Tu garantis un chiffre de CA ?",
+                a: "Non — et c'est volontaire. Je ne contrôle pas ton offre, ton marché ni ta réactivité. Par contre, je garantis le système en production (J+14) et l'absence de fuite de lead (J+30). Les résultats deviennent la conséquence logique d'un process maîtrisé.",
             },
             {
-                q: "Pourquoi un modèle Launch Fee + Success Fee ?",
-                a: "C'est le modèle le plus aligné : le Launch Fee couvre la mise en place et l'exécution, le Success Fee rémunère l'impact réel sur l'encaissement. On gagne surtout quand il y a encaissement réel.",
+                q: "Pourquoi un Launch Fee + Success Fee ?",
+                a: "Parce que c'est le modèle le plus aligné. Le Launch Fee couvre la construction et l'exécution, le Success Fee me rémunère sur l'impact réel. Je gagne quand tu encaisses.",
             },
             {
                 q: "C'est pour qui ?",
-                a: "B2B ou B2C high-ticket (2 000€ à 10 000€+) avec une offre vendable, une marge qui permet le partage de revenu, et une vraie volonté d'exécuter. Pas adapté si tu cherches des 'ventes garanties' sans t'impliquer.",
+                a: "Pour toi si tu vends du B2B ou B2C high-ticket (2 000€ à 10 000€+), que ton offre est vendable, et que tu veux un cadre orienté résultat avec exécution. Pas adapté si tu cherches des 'ventes garanties' sans t'impliquer.",
             },
             {
-                q: "Et si on a déjà un closer ?",
-                a: "Parfait. On structure le process, les scripts et les KPI. On forme et QA le closer interne. Clearpath apporte le système + le pilotage, le closer exécute avec une structure claire.",
+                q: "Et si j'ai déjà un closer ?",
+                a: "Parfait. Je structure le process, les scripts et les KPI. Je forme et supervise le closer en place. J'apporte le système + le pilotage, ton closer exécute avec une structure claire.",
             },
             {
                 q: "Que se passe-t-il après les 90 jours ?",
-                a: "3 options : Autonomie (tu gardes la machine + les SOP), Retainer (on continue à opérer + scaler), ou Partnership long terme (success fee ajusté selon la structure).",
+                a: "Trois options : Autonomie (tu gardes la machine + les SOP), Retainer (je continue à opérer et scaler), ou Partnership long terme avec un success fee ajusté.",
             },
             {
                 q: "Combien ça coûte ?",
-                a: "Le Launch Fee dépend du périmètre (complexité de l'offre, canaux à activer, état du système actuel). L'appel diagnostic est gratuit — on cadre le périmètre et on te donne un plan clair avec pricing transparent.",
+                a: "Le Launch Fee dépend du périmètre. L'appel diagnostic est gratuit — je cadre ta situation, je te propose un plan clair avec pricing transparent. Zéro surprise.",
             },
         ],
     },
@@ -328,13 +328,13 @@ export const siteConfig = {
     finalCTA: {
         eyebrow: "Prêt à passer du feeling au système ?",
         headline: "Ton Revenue Mérite",
-        highlightedText: "Un Vrai Système",
+        highlightedText: "De la Clarté",
         headlineEnd: "",
         subtitle:
-            "Chaque jour sans process clair, ce sont des leads qui tombent entre les mailles et du CA qui s'évapore. On construit ta machine en 90 jours.",
+            "Chaque jour sans process clair, c'est du CA qui s'évapore. Réserve ton appel diagnostic — 30 minutes pour savoir si je peux t'aider.",
         ctas: [
             {
-                text: "Valider Mon Éligibilité",
+                text: "Réserver Mon Appel Diagnostic",
                 href: "#rdv",
                 style: "primary",
                 arrow: true,
@@ -346,45 +346,45 @@ export const siteConfig = {
                 icon: "whatsapp",
             },
         ],
-        badges: ["✅ Appel diagnostic gratuit", "✅ Rémunération alignée", "✅ Système livré garanti"],
+        badges: ["✅ Appel 100% gratuit", "✅ Zéro engagement", "✅ Réponse sous 24h"],
     },
 
     /* ─────────────────── FOOTER ─────────────────── */
     footer: {
-        brand: "Clearpath Systems",
-        tagline: "Path2Revenue — Sales OS complet. Du lead à l'encaissement.",
+        brand: "Path2Revenue",
+        tagline: "Ton système de vente complet. Du lead à l'encaissement.",
         links: [
-            { label: "Problème", href: "#probleme" },
-            { label: "Sales OS", href: "#services" },
-            { label: "Méthode", href: "#methode" },
-            { label: "Garanties", href: "#honesty" },
+            { label: "Le Problème", href: "#probleme" },
+            { label: "Comment Ça Marche", href: "#methode" },
+            { label: "Le Système", href: "#services" },
             { label: "FAQ", href: "#faq" },
         ],
         socials: [
-            { platform: "linkedin", url: "https://www.linkedin.com/in/beljindi" },
+            { platform: "linkedin", url: "https://linkedin.com/in/beljindi" },
+            { platform: "instagram", url: "https://instagram.com/path2revenue" },
         ],
-        legal: "© 2025 Clearpath Systems — Path2Revenue. Tous droits réservés.",
+        legal: "© 2025 Path2Revenue — Bilal EL-JINDI. Tous droits réservés.",
     },
 
     /* ─────────────────── MERCI PAGE ─────────────────── */
     merci: {
-        headline: "Ton Appel Est",
-        highlightedText: "Réservé !",
+        headline: "C'est Réservé",
+        highlightedText: "!",
         subtitle:
-            "Tu vas recevoir un email de confirmation avec le lien Calendly. Prépare tes infos — ces 30 minutes sont les tiennes.",
+            "Tu vas recevoir un email de confirmation. Prépare tes infos — ces 30 minutes sont les tiennes.",
         gift: {
-            badge: "📋 Prépare Ton Diagnostic",
-            title: "4 Points à Avoir en Tête",
+            badge: "📋 Avant l'Appel",
+            title: "Prépare Ces 4 Points",
             description:
-                "Pour qu'on soit efficaces ensemble, prépare ces 4 éléments avant l'appel.",
+                "Pour qu'on soit efficaces ensemble, garde ces éléments en tête avant notre échange.",
             benefits: [
                 { icon: "🎯", label: "Ton offre + ticket moyen" },
                 { icon: "📊", label: "Ta source de leads actuelle" },
-                { icon: "📞", label: "Ton volume (leads/calls semaine)" },
+                { icon: "📞", label: "Ton volume (leads/calls par semaine)" },
                 { icon: "⏱️", label: "Ton cycle moyen de décision" },
             ],
             cta: {
-                text: "Me Contacter sur WhatsApp",
+                text: "M'écrire sur WhatsApp",
                 url: `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE("Path2Revenue — merci"))}`,
                 icon: "whatsapp",
             },
