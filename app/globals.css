@@ -126,9 +126,9 @@
   --color-accent: #E11D48;
   --color-accent-light: #FB7185;
   --color-accent-glow: rgba(225, 29, 72, 0.35);
-  --color-cta: #FFFFFF;
-  --color-cta-hover: #F1F1F1;
-  --color-cta-glow: rgba(255, 255, 255, 0.12);
+  --color-cta: #E11D48;
+  --color-cta-hover: #BE123C;
+  --color-cta-glow: rgba(225, 29, 72, 0.25);
   --color-success: #10B981;
   --color-danger: #E11D48;
   --color-gradient-from: #E11D48;
