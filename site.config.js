@@ -97,10 +97,10 @@ export const siteConfig = {
     /* ─────────────────── SOCIAL PROOF ─────────────────── */
     socialProof: {
         items: [
-            "SprintMob · GTM complet, segmentation AI, prospection ciblée",
-            "Imrane Dessaï · Closing",
-            "StarsBridge System · Closing structuré, business partner revenue",
-            "Novashield · Acquisition, clarification d'offre et process",
+            { text: "SprintMob · GTM complet, segmentation AI, prospection ciblée", image: "/sprintmob.png" },
+            { text: "Imrane Dessaï · Closing", image: "/imrane.png" },
+            { text: "StarsBridge System · Closing structuré, business partner revenue", image: "/starsbridgesystem.png" },
+            { text: "Novashield · Acquisition, clarification d'offre et process", image: "/novashield.png" },
         ],
     },
 
