@@ -112,27 +112,27 @@
   --color-gradient-to: #10B981;
 }
 
-/* Red — Vibrant Revenue, High-Ticket, Creative-Trust */
-[data-palette="red"] {
-  --color-bg-primary: #0C0A0F;
-  --color-bg-surface: #13101A;
-  --color-bg-card: #1A1522;
-  --color-bg-elevated: #211A2B;
-  --color-border-default: #2B2339;
-  --color-border-hover: #3D3250;
-  --color-text-primary: #F5F3F8;
-  --color-text-secondary: #A59BB5;
-  --color-text-muted: #6D607F;
-  --color-accent: #E11D48;
-  --color-accent-light: #FB7185;
-  --color-accent-glow: rgba(225, 29, 72, 0.35);
-  --color-cta: #E11D48;
-  --color-cta-hover: #BE123C;
-  --color-cta-glow: rgba(225, 29, 72, 0.25);
-  --color-success: #10B981;
-  --color-danger: #E11D48;
-  --color-gradient-from: #E11D48;
-  --color-gradient-to: #F97316;
+/* Obsidian — Premium Dark, Violet Accent, White CTA */
+[data-palette="obsidian"] {
+  --color-bg-primary: #09090B;
+  --color-bg-surface: #131316;
+  --color-bg-card: #18181B;
+  --color-bg-elevated: #1F1F23;
+  --color-border-default: #27272A;
+  --color-border-hover: #3F3F46;
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #71717A;
+  --color-accent: #A78BFA;
+  --color-accent-light: #C4B5FD;
+  --color-accent-glow: rgba(167, 139, 250, 0.25);
+  --color-cta: #FAFAFA;
+  --color-cta-hover: #E4E4E7;
+  --color-cta-glow: rgba(250, 250, 250, 0.08);
+  --color-success: #34D399;
+  --color-danger: #F87171;
+  --color-gradient-from: #A78BFA;
+  --color-gradient-to: #818CF8;
 }
 
 /* ============================================

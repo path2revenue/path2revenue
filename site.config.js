@@ -26,7 +26,7 @@ export const siteConfig = {
 
     /* ─────────────────── DESIGN ─────────────────── */
     design: {
-        palette: "red",
+        palette: "obsidian",
         style: "premium",
         layout: "centered",
         fontHeading: "Space Grotesk",
