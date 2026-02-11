@@ -75,7 +75,7 @@ export const siteConfig = {
                 arrow: true,
             },
             {
-                text: "M'écrire sur WhatsApp",
+                text: "Discuter sur WhatsApp",
                 href: "__whatsapp__",
                 style: "secondary",
                 icon: "whatsapp",
@@ -357,7 +357,7 @@ export const siteConfig = {
                 { icon: "clock", label: "Ton cycle moyen de décision" },
             ],
             cta: {
-                text: "M'écrire sur WhatsApp",
+                text: "Discuter sur WhatsApp",
                 url: `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE("Path2Revenue · merci"))}`,
                 icon: "whatsapp",
             },
