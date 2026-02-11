@@ -112,27 +112,27 @@
   --color-gradient-to: #10B981;
 }
 
-/* Red — Revenue, Closing, Sales Systems */
+/* Red — Premium Revenue, High-Ticket Sales */
 [data-palette="red"] {
-  --color-bg-primary: #0A0A0A;
-  --color-bg-surface: #141111;
-  --color-bg-card: #1C1616;
-  --color-bg-elevated: #241C1C;
-  --color-border-default: #2A1F1F;
-  --color-border-hover: #3D2B2B;
-  --color-text-primary: #F5F0F0;
-  --color-text-secondary: #B0A0A0;
-  --color-text-muted: #786868;
-  --color-accent: #DC2626;
-  --color-accent-light: #EF4444;
-  --color-accent-glow: rgba(220, 38, 38, 0.4);
-  --color-cta: #DC2626;
-  --color-cta-hover: #EF4444;
-  --color-cta-glow: rgba(220, 38, 38, 0.35);
+  --color-bg-primary: #090808;
+  --color-bg-surface: #110E0E;
+  --color-bg-card: #181313;
+  --color-bg-elevated: #201919;
+  --color-border-default: #2A2020;
+  --color-border-hover: #3A2C2C;
+  --color-text-primary: #F8F4F4;
+  --color-text-secondary: #A89999;
+  --color-text-muted: #6B5858;
+  --color-accent: #B91C1C;
+  --color-accent-light: #DC2626;
+  --color-accent-glow: rgba(185, 28, 28, 0.3);
+  --color-cta: #FFFFFF;
+  --color-cta-hover: #F5F5F5;
+  --color-cta-glow: rgba(255, 255, 255, 0.15);
   --color-success: #10B981;
-  --color-danger: #EF4444;
-  --color-gradient-from: #DC2626;
-  --color-gradient-to: #F97316;
+  --color-danger: #DC2626;
+  --color-gradient-from: #B91C1C;
+  --color-gradient-to: #D97706;
 }
 
 /* ============================================
