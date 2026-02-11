@@ -1,8 +1,8 @@
 /** ============================================================
  *  SITE CONFIG — PATH2REVENUE
  *  ============================================================
- *  Bilal EL-JINDI — Business Partner Revenue
- *  Partnership 90 jours — Sales OS Complet
+ *  Bilal EL-JINDI — Partnership 90 jours
+ *  On construit ton système de vente. Ensemble.
  *  ============================================================ */
 
 const WA_NUMBER = "33761941267";
@@ -14,25 +14,25 @@ export const siteConfig = {
     meta: {
         title: "Path2Revenue — Ton Système de Vente Complet en 90 Jours",
         description:
-            "Je construis et j'opère ton système de vente complet : process, pipeline, automatisations, closing, KPIs. En 90 jours, ta machine revenue est opérationnelle.",
+            "On construit et on opère ton système de vente complet : process, pipeline, automatisations, closing, KPIs. En 90 jours, ta machine revenue est opérationnelle.",
         keywords:
             "sales OS, système de vente, closing, pipeline, automatisation CRM, B2B high-ticket, revenue, acquisition, Path2Revenue, Bilal EL-JINDI",
         ogTitle: "Path2Revenue — Partnership 90 Jours",
         ogDescription: "Ton Sales OS complet en 90 jours. Process + automatisations + closing + pilotage.",
         ogImage: null,
         lang: "fr",
-        favicon: "🎯",
+        favicon: null,
     },
 
     /* ─────────────────── DESIGN ─────────────────── */
     design: {
         palette: "red",
         style: "premium",
-        layout: "editorial",
+        layout: "centered",
         fontHeading: "Space Grotesk",
         fontBody: "Inter",
         fontWeights: "300;400;500;600;700;800",
-        borderRadius: "8px",
+        borderRadius: "12px",
     },
 
     /* ─────────────────── GLOBAL LINKS ─────────────────── */
@@ -48,10 +48,10 @@ export const siteConfig = {
     navbar: {
         logo: { text: "Path2Revenue", emoji: null },
         links: [
-            { label: "Le Problème", href: "#probleme" },
-            { label: "Comment Ça Marche", href: "#methode" },
-            { label: "Le Système", href: "#services" },
-            { label: "Garanties", href: "#honesty" },
+            { label: "Problème", href: "#probleme" },
+            { label: "Résultats", href: "#resultats" },
+            { label: "Système", href: "#services" },
+            { label: "Méthode", href: "#methode" },
             { label: "FAQ", href: "#faq" },
         ],
         cta: { text: "Réserver un Appel", href: "#rdv" },
@@ -60,11 +60,11 @@ export const siteConfig = {
     /* ─────────────────── HERO ─────────────────── */
     hero: {
         eyebrow: { text: "Partnership 90 Jours — Sales OS Complet", dot: true },
-        headline: "Je Construis Ton Système",
+        headline: "On Construit Ton Système",
         highlightedText: "De Vente",
-        headlineEnd: "De A à Z. Du Lead à l'Encaissement.",
+        headlineEnd: "Ensemble. Du Lead à l'Encaissement.",
         subheadline:
-            'Pas de promesses floues. Pas d\'automatisation prématurée. <strong>Un vrai système de vente</strong> — process, pipeline, automatisations, closing — construit, testé et livré en 90 jours.',
+            '10 ans d\'expérience en dev, marketing et sales condensés dans <strong>un système clé en main</strong>. Process, pipeline, automatisations, closing — on construit, on teste, on livre. En 90 jours.',
         vslUrl: null,
         vslTitle: null,
         ctas: [
@@ -82,26 +82,25 @@ export const siteConfig = {
             },
         ],
         stats: [
+            { value: 10, suffix: " ans", label: "d'expérience dev, marketing & sales" },
             { value: 90, suffix: " jours", label: "pour un système opérationnel" },
-            { value: 14, suffix: "j", label: "système livré — garanti" },
-            { value: 0, suffix: " fuite", label: "de lead dès J+30" },
-            { value: 3, suffix: " options", label: "de closing flexibles" },
+            { value: 14, suffix: "j", label: "système en production — garanti" },
+            { value: 3, suffix: " clients", label: "accompagnés en parallèle max" },
         ],
         trustBadges: [
             "Appel diagnostic gratuit",
             "Rémunération sur résultat",
-            "Système livré — garanti",
+            "Système livré et garanti",
         ],
     },
 
     /* ─────────────────── SOCIAL PROOF ─────────────────── */
     socialProof: {
         items: [
-            "Sales OS complet en 90 jours",
-            "Automatisations sans fuite",
-            "KPIs clairs et actionnables",
-            "Closing structuré et flexible",
-            "Système transmissible — SOP incluses",
+            "SprintMob — GTM, segmentation AI, prospection ciblée",
+            "Imrane Dessai — Ads, landing pages, sales system, setting, closing",
+            "StarsBridge System — Closing, business partner revenue & acquisition",
+            "10 ans de dev, marketing, sales, e-commerce et B2B",
         ],
     },
 
@@ -112,7 +111,7 @@ export const siteConfig = {
         highlightedText: "Feeling",
         highlightColor: "danger",
         subtitle:
-            "Des outils, des 'stratégies', peut-être même des automatisations… Mais le vrai sujet reste le même : tu n'as pas de système clair pour transformer une conversation en encaissement.",
+            "Des outils, des 'stratégies', peut-être même des automatisations… Mais le vrai sujet reste le même : pas de système clair pour transformer une conversation en encaissement.",
         items: [
             {
                 icon: "Dice5",
@@ -125,14 +124,14 @@ export const siteConfig = {
                 icon: "TrendingDown",
                 title: "Ton CA est imprévisible",
                 description:
-                    "Certains mois tout roule, d'autres c'est le vide. Aucune visibilité, aucun KPI. Tu ne sais pas d'où viendra le prochain encaissement — ni quand.",
+                    "Certains mois tout roule, d'autres c'est le vide. Tu ne sais pas d'où viendra le prochain encaissement — ni quand. Aucun KPI, aucune visibilité.",
                 stat: "0 visibilité = 0 croissance",
             },
             {
                 icon: "Unplug",
                 title: "Des leads tombent entre les mailles",
                 description:
-                    "No-show non relancés, follow-ups oubliés, prospects indécis qui traînent. Chaque lead perdu, c'est de l'argent qui s'évapore — et tu ne le mesures même pas.",
+                    "No-show non relancés, follow-ups oubliés, prospects indécis qui traînent sans deadline. Chaque lead perdu, c'est du CA qui s'évapore.",
                 stat: "Chaque fuite = CA perdu",
             },
         ],
@@ -140,14 +139,14 @@ export const siteConfig = {
 
     /* ─────────────────── RESULTS ─────────────────── */
     results: {
-        eyebrow: "Ce Que Je Livre",
+        eyebrow: "Ce Qu'on Livre Ensemble",
         headline: "Ton Sales OS",
         highlightedText: "Complet",
         items: [
             {
                 metric: "J+14",
                 label: "Système en Production",
-                description: "Pipeline opérationnel, tracking KPI en place, automatisations essentielles actives, cadence lancée. Si ce n'est pas livré : je prolonge gratuitement.",
+                description: "Pipeline opérationnel, tracking KPI en place, automatisations essentielles actives, cadence lancée. Si ce n'est pas livré : on prolonge gratuitement.",
                 badge: "Garanti",
             },
             {
@@ -159,7 +158,7 @@ export const siteConfig = {
             {
                 metric: "CRM",
                 label: "Pipeline + Scripts + Qualification",
-                description: "Des stages clairs, des règles de no-show / no-decision, des scripts de call et follow-up. Tout est documenté, tout est exploitable.",
+                description: "Des stages clairs, des règles de no-show / no-decision, des scripts de call et follow-up. On documente tout, on rend tout exploitable.",
                 badge: "Process",
             },
             {
@@ -171,13 +170,13 @@ export const siteConfig = {
             {
                 metric: "Close",
                 label: "Closing Structuré",
-                description: "Je close pour toi, je forme ton closer, ou je place un closer. L'objectif : que ta machine tourne avec ou sans toi, sans dépendre d'une seule personne.",
+                description: "On close ensemble, on forme ton closer, ou on place un closer. L'objectif : que ta machine tourne de façon stable, sans dépendre d'une seule personne.",
                 badge: "Flexible",
             },
             {
                 metric: "SOP",
                 label: "Système Transmissible",
-                description: "À J+90 : SOP finalisées, système stable. Tu reprends la main en autonomie, tu passes en retainer, ou tu continues en partnership. Tu choisis.",
+                description: "À J+90 : SOP finalisées, système stable. Tu reprends la main en autonomie, tu passes en retainer, ou on continue en partnership. Tu choisis.",
                 badge: "Autonomie",
             },
         ],
@@ -186,17 +185,17 @@ export const siteConfig = {
     /* ─────────────────── SERVICES ─────────────────── */
     services: {
         eyebrow: "Le Système Path2Revenue",
-        headline: "Ce Que Je Mets",
-        highlightedText: "En Place",
-        headlineEnd: "Pour Toi",
+        headline: "Ce Qu'on Construit",
+        highlightedText: "Ensemble",
+        headlineEnd: "",
         subtitle:
-            "Chaque brique est pensée pour une seule chose : que tes encaissements deviennent réguliers, mesurables et reproductibles. Pas un outil de plus — un système complet.",
+            "Chaque brique est pensée pour une seule chose : que tes encaissements deviennent réguliers, mesurables et reproductibles. Pas un outil de plus — un vrai système.",
         items: [
             {
                 icon: "Target",
                 title: "Process de Vente Clair",
                 description:
-                    "CRM + pipeline avec des stages et règles précises. Qualification, disqualification, scripts de call et de recadrage. Tu sais exactement quoi faire à chaque étape.",
+                    "CRM + pipeline avec des stages et règles précises. Qualification, disqualification, scripts de call et de recadrage. On sait exactement quoi faire à chaque étape.",
                 badge: "Fondation",
             },
             {
@@ -210,7 +209,7 @@ export const siteConfig = {
                 icon: "Phone",
                 title: "Conversion & Closing",
                 description:
-                    "Selon ton besoin : je close moi-même, je forme ton closer (structure + QA), ou je te trouve et onboard un closer. L'objectif : une conversion stable qui ne dépend pas d'un héros.",
+                    "On close ensemble, on forme ton closer (structure + QA), ou on te trouve et on onboard un closer. L'objectif : une conversion stable et prévisible.",
                 badge: "Revenu direct",
                 span: 2,
             },
@@ -218,13 +217,13 @@ export const siteConfig = {
                 icon: "BarChart3",
                 title: "Pilotage KPI",
                 description:
-                    "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. Tu vois ce qui produit du revenu — et ce qui n'en produit pas.",
+                    "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. On voit ce qui produit du revenu — et ce qui n'en produit pas.",
             },
             {
                 icon: "FileText",
                 title: "SOP & Transmission",
                 description:
-                    "Le système est conçu pour être transmis à ton équipe. Documentation complète, formation, autonomie. Tu ne dépends pas de moi.",
+                    "Le système est conçu pour être transmis. Documentation complète, formation, autonomie. Tu ne dépends pas de nous à long terme.",
                 badge: "Différenciateur",
             },
         ],
@@ -232,7 +231,7 @@ export const siteConfig = {
 
     /* ─────────────────── PROCESS ─────────────────── */
     process: {
-        eyebrow: "Ma Méthode",
+        eyebrow: "Notre Méthode",
         headline: "D'abord Comprendre,",
         highlightedText: "Ensuite Construire",
         steps: [
@@ -240,13 +239,13 @@ export const siteConfig = {
                 number: "01",
                 title: "Build & Launch — J1 à J14",
                 description:
-                    "Diagnostic complet de ta situation. Setup CRM et pipeline. Scripts + qualification. Automatisations essentielles. Lancement du premier flux. Ton système est en production.",
+                    "Diagnostic complet de ta situation ensemble. Setup CRM et pipeline. Scripts + qualification. Automatisations essentielles. Lancement du premier flux. Système en production garanti.",
             },
             {
                 number: "02",
                 title: "Pilot & Proof — J15 à J45",
                 description:
-                    "Exécution terrain et itérations chaque semaine. Optimisation des relances, du show rate, de la conversion. Nettoyage du pipeline. Suivi KPI hebdomadaire ensemble.",
+                    "Exécution terrain et itérations chaque semaine. On optimise les relances, le show rate, la conversion. Nettoyage du pipeline et suivi KPI hebdomadaire.",
             },
             {
                 number: "03",
@@ -259,15 +258,15 @@ export const siteConfig = {
 
     /* ─────────────────── HONESTY ─────────────────── */
     honesty: {
-        eyebrow: "Ma Ligne Rouge",
-        headline: "Je Ne Vends Pas",
+        eyebrow: "Notre Engagement",
+        headline: "On Ne Vend Pas",
         highlightedText: "De Rêves",
         paragraphs: [
-            "Je ne vais pas te promettre '100 clients en 30 jours'. Ce serait malhonnête — et surtout, ça ne fonctionne pas comme ça.",
-            "Ce que je fais : je construis un système de vente, je le teste sur le terrain, et je te le livre opérationnel. Avec des garanties concrètes : système en production à J+14, zéro fuite de lead à J+30.",
-            "Ma rémunération est alignée : un Launch Fee pour enclencher la machine, plus un Success Fee sur encaissement réel. Je gagne quand tu encaisses — pas avant.",
+            "On ne va pas te promettre '100 clients en 30 jours'. Ce serait malhonnête — et surtout, ça ne fonctionne pas comme ça.",
+            "Ce qu'on fait : on construit un système de vente ensemble, on le teste sur le terrain, et on te le livre opérationnel. Avec des garanties concrètes : système en production à J+14, zéro fuite de lead à J+30.",
+            "Notre rémunération est alignée : un Launch Fee pour enclencher la machine, plus un Success Fee sur encaissement réel. On gagne quand tu encaisses — pas avant.",
         ],
-        signature: { name: "Bilal EL-JINDI", role: "Fondateur, Path2Revenue" },
+        signature: { name: "Bilal EL-JINDI", role: "Fondateur — 10 ans Dev, Marketing & Sales" },
     },
 
     /* ─────────────────── CALENDAR ─────────────────── */
@@ -276,15 +275,42 @@ export const siteConfig = {
         headline: "Réserve Ton",
         highlightedText: "Appel Diagnostic",
         subtitle:
-            "30 minutes ensemble pour comprendre ta situation, identifier ce qui bloque, et voir si je peux t'aider. Si je ne suis pas le bon fit, je te le dis — sans tourner autour du pot.",
+            "30 minutes ensemble pour comprendre ta situation, identifier ce qui bloque, et voir si on peut avancer ensemble. Si ce n'est pas le bon moment, on te le dit — sans tourner autour du pot.",
         benefits: [
             "Analyse de ta situation actuelle",
-            "Identification des premiers leviers",
+            "Identification des premiers leviers de revenu",
             "Plan d'action clair si ça matche",
             "Honnêteté totale — pas de fausse promesse",
         ],
         whatsappCopy: "Tu préfères qu'on échange directement ?",
         whatsappLabel: "Écris-moi sur WhatsApp",
+    },
+
+    /* ─────────────────── TESTIMONIALS ─────────────────── */
+    testimonials: {
+        eyebrow: "Ils Nous Ont Fait Confiance",
+        headline: "Projets",
+        highlightedText: "Accompagnés",
+        items: [
+            {
+                quote: "GTM structuré de A à Z : construction de liste, segmentation AI, prospection ciblée. Un système qui tourne et qui produit des résultats mesurables.",
+                name: "SprintMob",
+                role: "Go-to-Market & Prospection AI",
+                rating: 5,
+            },
+            {
+                quote: "Système complet : des publicités à la landing page, en passant par le sales system, le setting et le closing. Un vrai pipeline end-to-end.",
+                name: "Imrane Dessai",
+                role: "Ads, Landing Pages, Sales System & Closing",
+                rating: 5,
+            },
+            {
+                quote: "Business partner complet sur le revenu et l'acquisition. Closing structuré + pilotage KPI. Un partenariat qui produit des encaissements.",
+                name: "StarsBridge System",
+                role: "Closing & Business Partner Revenue",
+                rating: 5,
+            },
+        ],
     },
 
     /* ─────────────────── FAQ ─────────────────── */
@@ -294,32 +320,36 @@ export const siteConfig = {
         highlightedText: "Fréquentes",
         items: [
             {
-                q: "Concrètement, qu'est-ce que j'achète ?",
+                q: "Concrètement, qu'est-ce qu'on achète ?",
                 a: "Un Sales OS complet, construit et opéré pendant 90 jours. Process de vente (CRM, pipeline, qualification, scripts), automatisations essentielles (relances, no-show, no-decision), pilotage KPI et structure de closing.",
             },
             {
-                q: "Tu garantis un chiffre de CA ?",
-                a: "Non — et c'est volontaire. Je ne contrôle pas ton offre, ton marché ni ta réactivité. Par contre, je garantis le système en production (J+14) et l'absence de fuite de lead (J+30). Les résultats deviennent la conséquence logique d'un process maîtrisé.",
+                q: "Vous garantissez un chiffre de CA ?",
+                a: "Non — et c'est volontaire. On ne contrôle pas ton offre, ton marché ni ta réactivité. Par contre, on garantit le système en production (J+14) et l'absence de fuite de lead (J+30). Les résultats deviennent la conséquence d'un process maîtrisé.",
             },
             {
                 q: "Pourquoi un Launch Fee + Success Fee ?",
-                a: "Parce que c'est le modèle le plus aligné. Le Launch Fee couvre la construction et l'exécution. Le Success Fee me rémunère sur l'impact réel. Je gagne quand tu encaisses.",
+                a: "Parce que c'est le modèle le plus aligné. Le Launch Fee couvre la construction et l'exécution. Le Success Fee nous rémunère sur l'impact réel. On gagne quand tu encaisses.",
             },
             {
                 q: "C'est pour qui ?",
                 a: "B2B ou B2C high-ticket (2 000€ à 10 000€+), offre vendable, marge qui permet le partage de revenu, vraie volonté d'exécuter. Pas adapté si tu cherches des ventes garanties sans t'impliquer.",
             },
             {
+                q: "Quelle expérience derrière Path2Revenue ?",
+                a: "10 ans d'expérience en développement, marketing digital, sales, e-commerce et B2B. Des projets comme SprintMob (GTM + prospection AI), Imrane Dessai (système complet ads→closing) et StarsBridge System (business partner revenue).",
+            },
+            {
                 q: "Et si j'ai déjà un closer ?",
-                a: "Parfait. Je structure le process, les scripts et les KPI. Je forme et supervise ton closer. J'apporte le système et le pilotage, ton closer exécute avec une structure claire.",
+                a: "Parfait. On structure le process, les scripts et les KPI. On forme et supervise ton closer. On apporte le système et le pilotage, ton closer exécute avec une structure claire.",
             },
             {
                 q: "Que se passe-t-il après les 90 jours ?",
-                a: "Trois options : Autonomie (tu gardes la machine + les SOP), Retainer (je continue à opérer et scaler), ou Partnership long terme avec un success fee ajusté.",
+                a: "Trois options : Autonomie (tu gardes la machine + les SOP), Retainer (on continue à opérer et scaler), ou Partnership long terme avec un success fee ajusté.",
             },
             {
                 q: "Combien ça coûte ?",
-                a: "Le Launch Fee dépend du périmètre. L'appel diagnostic est gratuit — je cadre ta situation, je te propose un plan clair avec pricing transparent. Zéro surprise.",
+                a: "Le Launch Fee dépend du périmètre. L'appel diagnostic est gratuit — on cadre ta situation, on te propose un plan clair avec pricing transparent. Zéro surprise.",
             },
         ],
     },
@@ -331,7 +361,7 @@ export const siteConfig = {
         highlightedText: "De la Clarté",
         headlineEnd: "",
         subtitle:
-            "Chaque jour sans process clair, c'est du CA qui s'évapore. Réserve ton appel diagnostic — 30 minutes pour savoir si je peux t'aider.",
+            "Chaque jour sans process clair, c'est du CA qui s'évapore. Réserve ton appel diagnostic — 30 minutes pour savoir si on peut avancer ensemble.",
         ctas: [
             {
                 text: "Réserver Mon Appel Diagnostic",
@@ -352,11 +382,12 @@ export const siteConfig = {
     /* ─────────────────── FOOTER ─────────────────── */
     footer: {
         brand: "Path2Revenue",
-        tagline: "Ton système de vente complet. Du lead à l'encaissement.",
+        tagline: "On construit ton système de vente. Ensemble.",
         links: [
-            { label: "Le Problème", href: "#probleme" },
-            { label: "Comment Ça Marche", href: "#methode" },
-            { label: "Le Système", href: "#services" },
+            { label: "Problème", href: "#probleme" },
+            { label: "Résultats", href: "#resultats" },
+            { label: "Système", href: "#services" },
+            { label: "Méthode", href: "#methode" },
             { label: "FAQ", href: "#faq" },
         ],
         socials: [
@@ -403,6 +434,7 @@ export const siteConfig = {
         "process",
         "honesty",
         "calendar",
+        "testimonials",
         "faq",
         "finalCTA",
     ],

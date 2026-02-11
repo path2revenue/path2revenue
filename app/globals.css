@@ -112,27 +112,27 @@
   --color-gradient-to: #10B981;
 }
 
-/* Red — Premium Revenue, High-Ticket Sales */
+/* Red — Vibrant Revenue, High-Ticket, Creative-Trust */
 [data-palette="red"] {
-  --color-bg-primary: #090808;
-  --color-bg-surface: #110E0E;
-  --color-bg-card: #181313;
-  --color-bg-elevated: #201919;
-  --color-border-default: #2A2020;
-  --color-border-hover: #3A2C2C;
-  --color-text-primary: #F8F4F4;
-  --color-text-secondary: #A89999;
-  --color-text-muted: #6B5858;
-  --color-accent: #B91C1C;
-  --color-accent-light: #DC2626;
-  --color-accent-glow: rgba(185, 28, 28, 0.3);
+  --color-bg-primary: #0C0A0F;
+  --color-bg-surface: #13101A;
+  --color-bg-card: #1A1522;
+  --color-bg-elevated: #211A2B;
+  --color-border-default: #2B2339;
+  --color-border-hover: #3D3250;
+  --color-text-primary: #F5F3F8;
+  --color-text-secondary: #A59BB5;
+  --color-text-muted: #6D607F;
+  --color-accent: #E11D48;
+  --color-accent-light: #FB7185;
+  --color-accent-glow: rgba(225, 29, 72, 0.35);
   --color-cta: #FFFFFF;
-  --color-cta-hover: #F5F5F5;
-  --color-cta-glow: rgba(255, 255, 255, 0.15);
+  --color-cta-hover: #F1F1F1;
+  --color-cta-glow: rgba(255, 255, 255, 0.12);
   --color-success: #10B981;
-  --color-danger: #DC2626;
-  --color-gradient-from: #B91C1C;
-  --color-gradient-to: #D97706;
+  --color-danger: #E11D48;
+  --color-gradient-from: #E11D48;
+  --color-gradient-to: #F97316;
 }
 
 /* ============================================
