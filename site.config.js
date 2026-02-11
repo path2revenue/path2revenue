@@ -1,7 +1,7 @@
 /** ============================================================
  *  SITE CONFIG — PATH2REVENUE
  *  ============================================================
- *  Bilal EL-JINDI — Partnership 90 jours
+ *  Bilal EL-JINDI · Partnership 90 jours
  *  Sales OS complet pour entrepreneurs high-ticket.
  *  ============================================================ */
 
@@ -12,12 +12,12 @@ const WA_MESSAGE = (ctx) =>
 export const siteConfig = {
     /* ─────────────────── META & SEO ─────────────────── */
     meta: {
-        title: "Path2Revenue — Ton Système de Vente Complet en 90 Jours",
+        title: "Path2Revenue · Ton Système de Vente Complet en 90 Jours",
         description:
             "On construit ensemble ton système de vente complet : process, pipeline, automatisations, closing, KPIs. En 90 jours, ta machine revenue est opérationnelle.",
         keywords:
             "sales OS, système de vente, closing, pipeline, automatisation CRM, B2B high-ticket, revenue, acquisition, Path2Revenue, Bilal EL-JINDI",
-        ogTitle: "Path2Revenue — Partnership 90 Jours",
+        ogTitle: "Path2Revenue · Partnership 90 Jours",
         ogDescription: "Ton Sales OS complet en 90 jours. Process + automatisations + closing + pilotage.",
         ogImage: null,
         lang: "fr",
@@ -59,12 +59,12 @@ export const siteConfig = {
 
     /* ─────────────────── HERO ─────────────────── */
     hero: {
-        eyebrow: { text: "Partnership 90 Jours — Sales OS Clé en Main", dot: true },
+        eyebrow: { text: "Partnership 90 Jours · Sales OS Clé en Main", dot: true },
         headline: "On Construit Ton Système",
         highlightedText: "De Vente",
         headlineEnd: "Ensemble.",
         subheadline:
-            'High-ticket B2B ou B2C, cycle court. <strong>Process, pipeline, automatisations, closing</strong> — tout est construit, testé et livré en 90 jours. Pour que tes encaissements deviennent réguliers et mesurables.',
+            'Tu as déjà vendu ton offre. Tu sais que ça marche. Maintenant, il te faut <strong>le système pour scaler</strong> : process, pipeline, automatisations, closing. On le construit ensemble en 90 jours.',
         vslUrl: null,
         vslTitle: null,
         ctas: [
@@ -85,7 +85,7 @@ export const siteConfig = {
             { value: 10, suffix: " ans", label: "de dev, reconverti vente & marketing" },
             { value: 90, suffix: " jours", label: "pour un système opérationnel" },
             { value: 14, suffix: "j", label: "première mise en production" },
-            { value: 3, suffix: " clients", label: "accompagnés en parallèle max" },
+            { value: 3, suffix: " max", label: "clients accompagnés en parallèle" },
         ],
         trustBadges: [
             "Appel diagnostic gratuit",
@@ -97,9 +97,9 @@ export const siteConfig = {
     /* ─────────────────── SOCIAL PROOF ─────────────────── */
     socialProof: {
         items: [
-            "SprintMob — GTM complet, segmentation AI, prospection ciblée",
-            "Imrane Dessai — Système end-to-end : ads, landing, sales, setting, closing",
-            "StarsBridge System — Closing structuré, business partner revenue",
+            "SprintMob · GTM complet, segmentation AI, prospection ciblée",
+            "Imrane Dessai · Système end-to-end : ads, landing, sales, setting, closing",
+            "StarsBridge System · Closing structuré, business partner revenue",
         ],
     },
 
@@ -110,28 +110,35 @@ export const siteConfig = {
         highlightedText: "Feeling",
         highlightColor: "danger",
         subtitle:
-            "Tu as l'offre, les compétences, peut-être même les leads. Mais pas de système clair pour transformer une conversation en encaissement. Résultat : du CA qui glisse entre les mailles.",
+            "Tu as déjà prouvé que ton offre se vend. Mais chaque vente dépend encore de toi, de ton énergie, de ta dispo. Il n'y a pas de système derrière. Et ça se voit sur le CA.",
         items: [
             {
-                icon: "Dice5",
-                title: "Tes leads sont traités au feeling",
+                icon: "search",
+                title: "Pas de process clair",
                 description:
-                    "Pas de pipeline clair, pas de règles de qualification, pas de process. Chaque lead suit un chemin différent — et tu perds des deals sans même t'en rendre compte.",
+                    "Chaque lead suit un chemin différent. Pas de pipeline, pas de règles, pas de scripts. Tu perds des deals sans même t'en rendre compte.",
                 stat: "Feeling ≠ Système",
             },
             {
-                icon: "TrendingDown",
-                title: "Ton CA est imprévisible",
+                icon: "trending-down",
+                title: "CA imprévisible",
                 description:
-                    "Certains mois tout roule, d'autres c'est le vide. Tu ne sais pas d'où viendra le prochain encaissement — ni quand. Aucun KPI, aucune visibilité.",
+                    "Certains mois tout roule, d'autres c'est le silence. Tu ne sais pas d'où viendra le prochain encaissement ni quand il tombera.",
                 stat: "0 visibilité = 0 croissance",
             },
             {
-                icon: "Unplug",
-                title: "Des leads tombent entre les mailles",
+                icon: "unlock",
+                title: "Des leads qui passent entre les mailles",
                 description:
-                    "No-show non relancés, follow-ups oubliés, prospects indécis qui traînent sans deadline. Chaque lead perdu, c'est du CA qui s'évapore.",
+                    "No-show non relancés. Follow-ups oubliés. Prospects indécis qui traînent sans deadline. Chaque fuite, c'est du CA en moins.",
                 stat: "Chaque fuite = CA perdu",
+            },
+            {
+                icon: "clock",
+                title: "Tout repose sur toi",
+                description:
+                    "Tu es le seul closer, le seul relanceur, le seul décideur. Pas de structure à déléguer, pas de documentation, pas de reprise possible.",
+                stat: "Solo ≠ Scalable",
             },
         ],
     },
@@ -145,7 +152,7 @@ export const siteConfig = {
             {
                 metric: "J+14",
                 label: "Système en Production",
-                description: "Pipeline opérationnel, tracking KPI en place, automatisations actives, cadence lancée. Garanti — sinon on prolonge gratuitement.",
+                description: "Pipeline opérationnel, tracking KPI en place, automatisations actives, cadence lancée. Garanti, sinon on prolonge gratuitement.",
                 badge: "Garanti",
             },
             {
@@ -157,7 +164,7 @@ export const siteConfig = {
             {
                 metric: "CRM",
                 label: "Pipeline + Scripts + Qualification",
-                description: "Des stages précis, des règles de no-show / no-decision, des scripts de call et de follow-up. Tout est documenté et exploitable.",
+                description: "Des stages précis, des règles de no-show et de no-decision, des scripts de call et de follow-up. Tout est documenté et exploitable.",
                 badge: "Process",
             },
             {
@@ -191,35 +198,42 @@ export const siteConfig = {
             "Chaque brique est pensée pour une seule chose : que tes encaissements deviennent réguliers, mesurables et reproductibles.",
         items: [
             {
-                icon: "Target",
+                icon: "target",
                 title: "Process de Vente Clair",
                 description:
                     "CRM + pipeline avec des stages et règles précises. Qualification, disqualification, scripts de call et de recadrage. On sait exactement quoi faire à chaque étape.",
                 badge: "Fondation",
             },
             {
-                icon: "Zap",
+                icon: "zap",
                 title: "Automatisations Essentielles",
                 description:
-                    "Lead entrant → CRM → scoring → action. Relances automatiques. Récupération no-show. Relances no-decision avec deadlines. Zéro fuite, zéro oubli.",
+                    "Lead entrant → CRM → scoring → action. Relances auto par statut. Récupération no-show. Relances no-decision avec deadlines. Zéro fuite, zéro oubli.",
                 badge: "Protection revenu",
             },
             {
-                icon: "Phone",
+                icon: "phone-call",
                 title: "Conversion & Closing",
                 description:
-                    "On close ensemble, on forme ton closer (structure + QA), ou on te trouve et on onboard un closer. Conversion stable et prévisible.",
+                    "On close ensemble, on forme ton closer (structure + QA), ou on recrute et on onboard un closer. Conversion stable et prévisible.",
                 badge: "Revenu direct",
             },
             {
-                icon: "BarChart3",
+                icon: "bar-chart-2",
                 title: "Pilotage KPI",
                 description:
-                    "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. On voit ce qui produit du revenu — et ce qui n'en produit pas.",
+                    "Show rate, close rate, no-show rate, délai lead→close, objections fréquentes. On voit ce qui produit du revenu et ce qui n'en produit pas.",
                 badge: "Visibilité",
             },
             {
-                icon: "FileText",
+                icon: "rocket",
+                title: "Lancement & Acquisition",
+                description:
+                    "Pas encore de leads ? On met en place le nécessaire pour lancer : positionnement, canaux, premières séquences. Le système est prêt dès le premier contact.",
+                badge: "Go-to-market",
+            },
+            {
+                icon: "file-text",
                 title: "SOP & Transmission",
                 description:
                     "Le système est conçu pour être transmis. Documentation complète, formation, autonomie. Tu ne dépends pas de moi à long terme.",
@@ -236,21 +250,21 @@ export const siteConfig = {
         steps: [
             {
                 number: "01",
-                title: "Build & Launch — J1 à J14",
+                title: "Build & Launch · J1 à J14",
                 description:
                     "Diagnostic complet de ta situation. Setup CRM et pipeline. Scripts + qualification. Automatisations essentielles. Lancement du premier flux. Système en production garanti.",
             },
             {
                 number: "02",
-                title: "Pilot & Proof — J15 à J45",
+                title: "Pilot & Proof · J15 à J45",
                 description:
                     "Exécution terrain et itérations chaque semaine. Optimisation des relances, du show rate, de la conversion. Nettoyage du pipeline et suivi KPI hebdomadaire.",
             },
             {
                 number: "03",
-                title: "Scale & Handoff — J46 à J90",
+                title: "Scale & Handoff · J46 à J90",
                 description:
-                    "SOP finalisées. Système stable et scalable. Transition du closing si nécessaire. Passation complète ou continuation en retainer — c'est toi qui décides.",
+                    "SOP finalisées. Système stable et scalable. Transition du closing si nécessaire. Passation complète ou continuation en retainer. C'est toi qui décides.",
             },
         ],
     },
@@ -261,9 +275,9 @@ export const siteConfig = {
         headline: "Pas De Promesses",
         highlightedText: "En L'Air",
         paragraphs: [
-            "Je ne vais pas te promettre '100 clients en 30 jours'. Ce serait malhonnête — et ça ne fonctionne pas comme ça.",
-            "Ce que je fais : je construis avec toi un système de vente, on le teste sur le terrain, et je te le livre opérationnel. Avec des garanties concrètes : système en production à J+14, zéro fuite de lead à J+30.",
-            "Ma rémunération est alignée : un Launch Fee pour enclencher la machine, plus un Success Fee sur encaissement réel. Je gagne quand tu encaisses — pas avant.",
+            "Je ne vais pas te promettre 100 clients en 30 jours. Ce serait malhonnête, et surtout ça ne fonctionne pas comme ça.",
+            "Ce que je fais : je construis avec toi un système de vente, on le teste sur le terrain, et je te le livre opérationnel. Avec des garanties concrètes. Système en production à J+14. Zéro fuite de lead à J+30.",
+            "Ma rémunération est alignée : un Launch Fee pour enclencher la machine, plus un Success Fee sur encaissement réel. Je gagne quand tu encaisses. Pas avant.",
         ],
         signature: { name: "Bilal EL-JINDI", role: "10 ans de dev, reconverti sales ops & marketing" },
     },
@@ -274,12 +288,12 @@ export const siteConfig = {
         headline: "Réserve Ton",
         highlightedText: "Appel Diagnostic",
         subtitle:
-            "30 minutes pour comprendre ta situation, identifier ce qui bloque, et voir si on peut avancer ensemble. Si ce n'est pas le bon moment, je te le dis — sans tourner autour du pot.",
+            "30 minutes pour comprendre ta situation, identifier ce qui bloque, et voir si on peut avancer ensemble. Si ce n'est pas le bon moment, je te le dis. Sans tourner autour du pot.",
         benefits: [
             "Analyse de ta situation actuelle",
-            "Identification des premiers leviers de revenu",
-            "Plan d'action clair si ça matche",
-            "Transparence totale — pas de fausse promesse",
+            "Identification des premiers leviers",
+            "Plan d'action concret si ça matche",
+            "Transparence totale, zéro bullshit",
         ],
         whatsappCopy: "Tu préfères qu'on échange directement ?",
         whatsappLabel: "Écris-moi sur WhatsApp",
@@ -293,7 +307,11 @@ export const siteConfig = {
         items: [
             {
                 q: "C'est pour qui exactement ?",
-                a: "Entrepreneurs et indépendants qui vendent du high-ticket (B2B ou B2C), avec un cycle de vente court. Tu as l'offre, les leads arrivent — mais pas de système pour convertir et encaisser de façon régulière.",
+                a: "Entrepreneurs et indépendants qui ont déjà vendu leur offre au moins une fois. High-ticket B2B ou B2C, cycle court. Tu sais que ton offre marche. Il te manque le système pour que les ventes soient régulières, pas juste ponctuelles.",
+            },
+            {
+                q: "Et si je n'ai pas encore de flux de leads ?",
+                a: "On peut justement mettre en place le nécessaire pour lancer. Positionnement, canaux d'acquisition, premières séquences. Le système est prêt dès le premier contact entrant.",
             },
             {
                 q: "Concrètement, qu'est-ce qu'on construit ensemble ?",
@@ -301,7 +319,7 @@ export const siteConfig = {
             },
             {
                 q: "Tu garantis un chiffre de CA ?",
-                a: "Non — et c'est volontaire. Je ne contrôle pas ton offre, ton marché ni ta réactivité. Par contre, je garantis le système en production (J+14) et l'absence de fuite de lead (J+30). Les résultats deviennent la conséquence d'un process maîtrisé.",
+                a: "Non, et c'est volontaire. Je ne contrôle pas ton offre, ton marché ni ta réactivité. Par contre, je garantis le système en production (J+14) et l'absence de fuite de lead (J+30). Les résultats deviennent la conséquence d'un process maîtrisé.",
             },
             {
                 q: "Pourquoi un Launch Fee + Success Fee ?",
@@ -309,7 +327,7 @@ export const siteConfig = {
             },
             {
                 q: "Quel est ton background ?",
-                a: "10 ans de développement (tech, automatisation, systèmes), puis une reconversion complète en vente, sales ops et marketing — payant et organique. J'ai construit des systèmes GTM pour SprintMob, un pipeline end-to-end pour Imrane Dessai, et je suis business partner revenue pour StarsBridge System.",
+                a: "10 ans de développement et de construction de systèmes tech. Puis une reconversion complète en vente, sales ops et marketing, payant et organique. J'ai construit des systèmes GTM pour SprintMob, un pipeline end-to-end pour Imrane Dessai, et je suis business partner revenue pour StarsBridge System.",
             },
             {
                 q: "Et si j'ai déjà un closer ?",
@@ -317,11 +335,7 @@ export const siteConfig = {
             },
             {
                 q: "Que se passe-t-il après les 90 jours ?",
-                a: "Trois options : Autonomie (tu gardes la machine + les SOP), Retainer (je continue à opérer et scaler), ou Partnership long terme avec un success fee ajusté.",
-            },
-            {
-                q: "Combien ça coûte ?",
-                a: "Le Launch Fee dépend du périmètre. L'appel diagnostic est gratuit — on cadre ta situation, je te propose un plan clair avec pricing transparent. Zéro surprise.",
+                a: "Trois options. Autonomie : tu gardes la machine et les SOP. Retainer : je continue à opérer et scaler. Partnership long terme avec un success fee ajusté.",
             },
         ],
     },
@@ -333,7 +347,7 @@ export const siteConfig = {
         highlightedText: "De la Clarté",
         headlineEnd: "",
         subtitle:
-            "Chaque jour sans process clair, c'est du CA qui s'évapore. Réserve ton appel diagnostic — 30 minutes pour voir si on peut avancer ensemble.",
+            "Chaque jour sans process clair, c'est du CA qui s'évapore. Réserve ton appel diagnostic. 30 minutes pour voir si on peut avancer ensemble.",
         ctas: [
             {
                 text: "Réserver Mon Appel Diagnostic",
@@ -366,7 +380,7 @@ export const siteConfig = {
             { platform: "linkedin", url: "https://linkedin.com/in/beljindi" },
             { platform: "instagram", url: "https://instagram.com/path2revenue" },
         ],
-        legal: "© 2025 Path2Revenue — Bilal EL-JINDI. Tous droits réservés.",
+        legal: "© 2025 Path2Revenue · Bilal EL-JINDI. Tous droits réservés.",
     },
 
     /* ─────────────────── MERCI PAGE ─────────────────── */
@@ -374,21 +388,21 @@ export const siteConfig = {
         headline: "C'est Réservé",
         highlightedText: "!",
         subtitle:
-            "Tu vas recevoir un email de confirmation. Prépare tes infos — ces 30 minutes sont les tiennes.",
+            "Tu vas recevoir un email de confirmation. Prépare tes infos, ces 30 minutes sont les tiennes.",
         gift: {
             badge: "Avant l'Appel",
             title: "Prépare Ces 4 Points",
             description:
                 "Pour qu'on soit efficaces ensemble, garde ces éléments en tête avant notre échange.",
             benefits: [
-                { icon: "Target", label: "Ton offre + ticket moyen" },
-                { icon: "BarChart3", label: "Ta source de leads actuelle" },
-                { icon: "Phone", label: "Ton volume (leads/calls par semaine)" },
-                { icon: "Clock", label: "Ton cycle moyen de décision" },
+                { icon: "target", label: "Ton offre + ticket moyen" },
+                { icon: "bar-chart-2", label: "Ta source de leads actuelle" },
+                { icon: "phone-call", label: "Ton volume (leads/calls par semaine)" },
+                { icon: "clock", label: "Ton cycle moyen de décision" },
             ],
             cta: {
                 text: "M'écrire sur WhatsApp",
-                url: `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE("Path2Revenue — merci"))}`,
+                url: `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE("Path2Revenue · merci"))}`,
                 icon: "whatsapp",
             },
             footnote: "Appel gratuit, 30 minutes, sans engagement.",
