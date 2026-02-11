@@ -143,56 +143,6 @@ export const siteConfig = {
         ],
     },
 
-    /* ─────────────────── RESULTS ─────────────────── */
-    results: {
-        eyebrow: "Ce Qu'on Livre Ensemble",
-        headline: "Ton Sales OS",
-        highlightedText: "Complet",
-        items: [
-            {
-                metric: "Offre",
-                label: "Offre, ICP & Canaux",
-                description: "Revue de ton offre, définition de ton client idéal, choix des canaux adaptés à ton cas. On pose la stratégie avant de construire.",
-                badge: "Stratégie",
-            },
-            {
-                metric: "J+14",
-                label: "Système en Production",
-                description: "Pipeline opérationnel, tracking KPI en place, automatisations actives, cadence lancée. Garanti, sinon on prolonge gratuitement.",
-                badge: "Garanti",
-            },
-            {
-                metric: "J+30",
-                label: "Zéro Fuite de Lead",
-                description: "Chaque lead a un statut clair : avancé, relancé, ou disqualifié. Plus un seul prospect oublié dans un coin.",
-                badge: "Garanti",
-            },
-            {
-                metric: "CRM",
-                label: "Pipeline + Scripts + Qualification",
-                description: "Des stages précis, des règles de no-show et de no-decision, des scripts de call et de follow-up. Tout est documenté et exploitable.",
-                badge: "Process",
-            },
-            {
-                metric: "Auto",
-                label: "Outils & Automatisations",
-                description: "Les bons outils, adaptés à ton offre, ton budget et ton volume. Relances, suivi, scoring. Ce qui protège ton revenu tourne tout seul.",
-                badge: "Sur mesure",
-            },
-            {
-                metric: "Close",
-                label: "Closing Structuré",
-                description: "On close ensemble, on forme ton closer, ou on en place un. L'objectif : que ta machine tourne de façon stable et prévisible.",
-                badge: "Flexible",
-            },
-            {
-                metric: "SOP",
-                label: "Système Transmissible",
-                description: "À J+90 : SOP finalisées, système stable. Tu reprends la main en autonomie, tu passes en retainer, ou on continue ensemble. Tu choisis.",
-                badge: "Autonomie",
-            },
-        ],
-    },
 
     /* ─────────────────── SERVICES ─────────────────── */
     services: {
@@ -237,13 +187,6 @@ export const siteConfig = {
                 description:
                     "On revoit ton offre, ton client idéal et les canaux les plus adaptés à ton cas. Positionnement clair, segmentation précise, stratégie d'acquisition définie. Tout part de là.",
                 badge: "Stratégie",
-            },
-            {
-                icon: "rocket",
-                title: "Lancement & Acquisition",
-                description:
-                    "Pas encore de leads ? On met en place le nécessaire pour lancer : positionnement, canaux, premières séquences. Le système est prêt dès le premier contact.",
-                badge: "Go-to-market",
             },
             {
                 icon: "file-text",
@@ -428,7 +371,7 @@ export const siteConfig = {
         "hero",
         "socialProof",
         "painPoints",
-        "results",
+
         "services",
         "process",
         "honesty",
