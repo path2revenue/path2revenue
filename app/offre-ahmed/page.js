@@ -24,7 +24,7 @@ const services = [
                     "Document ICP final livré (brandable SBS)",
                 ],
                 whiteLabel: 500,
-                suggested: 1200,
+                suggested: 800,
             },
             {
                 service: "Structuration de l'Offre",
@@ -35,7 +35,7 @@ const services = [
                     "Recommandations canaux d'acquisition",
                 ],
                 whiteLabel: 450,
-                suggested: 1000,
+                suggested: 700,
             },
         ],
     },
@@ -54,7 +54,7 @@ const services = [
                     "Itérations illimitées jusqu'à validation",
                 ],
                 whiteLabel: 1200,
-                suggested: 3000,
+                suggested: 2000,
             },
             {
                 service: "Configuration GHL Complète",
@@ -67,7 +67,7 @@ const services = [
                     "Connexion domaine et DNS du client",
                 ],
                 whiteLabel: 600,
-                suggested: 1500,
+                suggested: 1000,
             },
             {
                 service: "Meta Pixel + Conversions API (CAPI)",
@@ -79,7 +79,7 @@ const services = [
                     "Test et validation dans Events Manager",
                 ],
                 whiteLabel: 250,
-                suggested: 600,
+                suggested: 400,
             },
         ],
     },
@@ -98,7 +98,7 @@ const services = [
                     "Documentation du process pour réplication",
                 ],
                 whiteLabel: 900,
-                suggested: 2200,
+                suggested: 1400,
             },
             {
                 service: "Automatisations Business",
@@ -110,7 +110,7 @@ const services = [
                     "Documentation technique de chaque workflow",
                 ],
                 whiteLabel: 800,
-                suggested: 1800,
+                suggested: 1200,
             },
             {
                 service: "Setup Meta Ads Initial",
@@ -123,7 +123,7 @@ const services = [
                     "Guide d'optimisation et de scaling",
                 ],
                 whiteLabel: 350,
-                suggested: 800,
+                suggested: 550,
             },
         ],
     },
@@ -141,7 +141,7 @@ const services = [
                     "Livrés aux couleurs SBS (white-label)",
                 ],
                 whiteLabel: 400,
-                suggested: 900,
+                suggested: 600,
             },
         ],
     },
@@ -157,7 +157,7 @@ const retainer = {
         "Nouveaux workflows ou automations (raisonnable)",
     ],
     whiteLabel: 250,
-    suggested: 550,
+    suggested: 400,
 };
 
 const fmt = (n) => n.toLocaleString("fr-FR") + " €";
@@ -470,7 +470,7 @@ export default function OffreAhmed() {
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="bg-[#111827] border border-[#1E293B] rounded-2xl p-6">
                             <div className="text-xs text-[#EAB308] font-semibold uppercase tracking-wider mb-3">Essentiel</div>
-                            <div className="text-2xl font-bold text-white mb-1">À partir de {fmt(2200)}</div>
+                            <div className="text-2xl font-bold text-white mb-1">À partir de {fmt(1800)}</div>
                             <div className="text-xs text-[#64748B] mb-4">Ton coût : ~{fmt(950)}</div>
                             <ul className="space-y-2 text-sm text-[#94A3B8]">
                                 <li className="flex items-center gap-2"><span className="text-[#22C55E]">✓</span> Landing Page</li>
@@ -481,7 +481,7 @@ export default function OffreAhmed() {
                         <div className="bg-gradient-to-br from-[#1E3A5F] to-[#1E293B] border-2 border-[#3B82F6] rounded-2xl p-6 relative">
                             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#3B82F6] text-white text-xs font-bold px-3 py-1 rounded-full">Populaire</div>
                             <div className="text-xs text-[#3B82F6] font-semibold uppercase tracking-wider mb-3">Business</div>
-                            <div className="text-2xl font-bold text-white mb-1">À partir de {fmt(6500)}</div>
+                            <div className="text-2xl font-bold text-white mb-1">À partir de {fmt(4500)}</div>
                             <div className="text-xs text-[#64748B] mb-4">Ton coût : ~{fmt(2800)}</div>
                             <ul className="space-y-2 text-sm text-[#94A3B8]">
                                 <li className="flex items-center gap-2"><span className="text-[#22C55E]">✓</span> Tout Essentiel +</li>
