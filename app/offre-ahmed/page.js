@@ -73,15 +73,14 @@ const CATEGORIES = [
             },
             {
                 id: "pixel",
-                name: "Meta Pixel + CAPI Tracking",
-                cost: 250,
-                defaultPrice: 400,
+                name: "Meta Pixel Setup",
+                cost: 150,
+                defaultPrice: 300,
                 scope: [
-                    "Installation Meta Pixel (client-side)",
-                    "API Route serveur CAPI (server-side)",
-                    "Dual tracking avec déduplication",
-                    "Événements customs configurés",
-                    "Test et validation Events Manager",
+                    "Installation et configuration Meta Pixel",
+                    "Événements standards et customs",
+                    "Vérification dans Events Manager",
+                    "Connexion avec les campagnes ads",
                 ],
             },
         ],
@@ -174,6 +173,9 @@ export default function OffreAhmed() {
         Object.fromEntries(ALL_SERVICES.map((s) => [s.id, s.defaultPrice]))
     );
     const [commission, setCommission] = useState(10);
+    const [closerPct, setCloserPct] = useState(10);
+    const [setterPct, setSetterPct] = useState(5);
+    const [influencerPct, setInfluencerPct] = useState(5);
     const [payment, setPayment] = useState("50-50");
     const [client, setClient] = useState({ name: "", company: "", email: "" });
     const [view, setView] = useState("config"); // config | devis | recap
@@ -192,6 +194,14 @@ export default function OffreAhmed() {
     const totalClient = selectedServices.reduce((a, s) => a + (prices[s.id] || 0), 0);
     const totalMargin = totalClient - totalCost;
     const marginPct = totalClient > 0 ? Math.round((totalMargin / totalClient) * 100) : 0;
+
+    // Full cost breakdown for Ahmed
+    const closerCost = Math.round(totalClient * closerPct / 100);
+    const setterCost = Math.round(totalClient * setterPct / 100);
+    const influencerCost = Math.round(totalClient * influencerPct / 100);
+    const teamCosts = closerCost + setterCost + influencerCost;
+    const ahmedNet = totalClient - totalCost - teamCosts;
+    const ahmedNetPct = totalClient > 0 ? Math.round((ahmedNet / totalClient) * 100) : 0;
 
     const today = new Date();
     const validUntil = new Date(today);
@@ -396,7 +406,7 @@ export default function OffreAhmed() {
                                     <th className="text-left p-4">Service</th>
                                     <th className="text-right p-4">Coût Bilal</th>
                                     <th className="text-right p-4">Prix Client</th>
-                                    <th className="text-right p-4">Marge Ahmed</th>
+                                    <th className="text-right p-4">Marge Brute</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -420,19 +430,44 @@ export default function OffreAhmed() {
                         </table>
                     </div>
 
-                    {/* Summary */}
-                    <div className="grid grid-cols-3 gap-6 mb-10">
-                        <div className="bg-[#111827] border border-[#1E293B] rounded-xl p-6 text-center">
-                            <div className="text-xs text-[#64748B] uppercase mb-1">Ahmed doit à Bilal</div>
-                            <div className="text-2xl font-bold text-[#A78BFA]">{fmt(totalCost)} €</div>
-                        </div>
-                        <div className="bg-[#111827] border border-[#1E293B] rounded-xl p-6 text-center">
-                            <div className="text-xs text-[#64748B] uppercase mb-1">Ahmed garde</div>
-                            <div className="text-2xl font-bold text-[#22C55E]">{fmt(totalMargin)} €</div>
-                        </div>
-                        <div className="bg-[#111827] border border-[#1E293B] rounded-xl p-6 text-center">
-                            <div className="text-xs text-[#64748B] uppercase mb-1">Marge</div>
-                            <div className="text-2xl font-bold text-[#EAB308]">{marginPct}%</div>
+                    {/* Full Cost Breakdown */}
+                    <div className="bg-[#111827] border border-[#1E293B] rounded-2xl p-6 mb-10">
+                        <h3 className="text-sm font-semibold text-white mb-4">Ventilation Complète</h3>
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center text-sm">
+                                <span className="text-[#94A3B8]">Client paye</span>
+                                <span className="font-bold text-white">{fmt(totalClient)} €</span>
+                            </div>
+                            <div className="border-t border-[#1E293B] pt-3 space-y-2">
+                                <div className="flex justify-between items-center text-sm">
+                                    <span className="text-[#94A3B8]">− Bilal (delivery)</span>
+                                    <span className="text-[#A78BFA] font-semibold">-{fmt(totalCost)} €</span>
+                                </div>
+                                {closerPct > 0 && (
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-[#94A3B8]">− Closer ({closerPct}%)</span>
+                                        <span className="text-[#F59E0B] font-semibold">-{fmt(closerCost)} €</span>
+                                    </div>
+                                )}
+                                {setterPct > 0 && (
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-[#94A3B8]">− Setter ({setterPct}%)</span>
+                                        <span className="text-[#F59E0B] font-semibold">-{fmt(setterCost)} €</span>
+                                    </div>
+                                )}
+                                {influencerPct > 0 && (
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-[#94A3B8]">− Influenceur ({influencerPct}%)</span>
+                                        <span className="text-[#F59E0B] font-semibold">-{fmt(influencerCost)} €</span>
+                                    </div>
+                                )}
+                            </div>
+                            <div className="border-t-2 border-[#1E293B] pt-3 flex justify-between items-center">
+                                <span className="font-bold text-white">= Ahmed net</span>
+                                <span className={`text-xl font-bold ${ahmedNet >= 0 ? "text-[#22C55E]" : "text-[#EF4444]"}`}>
+                                    {ahmedNet >= 0 ? "+" : ""}{fmt(ahmedNet)} € <span className="text-sm font-normal">({ahmedNetPct}%)</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
@@ -600,11 +635,63 @@ export default function OffreAhmed() {
                     </div>
                 ))}
 
+                {/* Team Commissions */}
+                <div className="bg-[#111827] border border-[#1E293B] rounded-2xl p-6 mb-8">
+                    <h2 className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-4">Commissions Équipe (% du prix client)</h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm text-[#94A3B8]">Closer</span>
+                                <span className="text-sm font-bold text-[#F59E0B]">{closerPct}%</span>
+                            </div>
+                            <input
+                                type="range"
+                                min="0"
+                                max="20"
+                                value={closerPct}
+                                onChange={(e) => setCloserPct(Number(e.target.value))}
+                                className="w-full accent-[#F59E0B]"
+                            />
+                            {totalClient > 0 && <div className="text-xs text-[#475569] mt-1">{fmt(closerCost)} € sur ce deal</div>}
+                        </div>
+                        <div>
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm text-[#94A3B8]">Setter</span>
+                                <span className="text-sm font-bold text-[#F59E0B]">{setterPct}%</span>
+                            </div>
+                            <input
+                                type="range"
+                                min="0"
+                                max="15"
+                                value={setterPct}
+                                onChange={(e) => setSetterPct(Number(e.target.value))}
+                                className="w-full accent-[#F59E0B]"
+                            />
+                            {totalClient > 0 && <div className="text-xs text-[#475569] mt-1">{fmt(setterCost)} € sur ce deal</div>}
+                        </div>
+                        <div>
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm text-[#94A3B8]">Influenceur / Apporteur</span>
+                                <span className="text-sm font-bold text-[#F59E0B]">{influencerPct}%</span>
+                            </div>
+                            <input
+                                type="range"
+                                min="0"
+                                max="20"
+                                value={influencerPct}
+                                onChange={(e) => setInfluencerPct(Number(e.target.value))}
+                                className="w-full accent-[#F59E0B]"
+                            />
+                            {totalClient > 0 && <div className="text-xs text-[#475569] mt-1">{fmt(influencerCost)} € sur ce deal</div>}
+                        </div>
+                    </div>
+                </div>
+
                 {/* Settings Row */}
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
-                    {/* Commission */}
+                    {/* Commission Bilal */}
                     <div className="bg-[#111827] border border-[#1E293B] rounded-xl p-5">
-                        <div className="text-xs text-[#64748B] uppercase tracking-wider mb-3 font-semibold">Commission Performance</div>
+                        <div className="text-xs text-[#64748B] uppercase tracking-wider mb-3 font-semibold">Commission Bilal (récurrent)</div>
                         <div className="flex items-center gap-3">
                             <input
                                 type="range"
@@ -612,7 +699,7 @@ export default function OffreAhmed() {
                                 max="30"
                                 value={commission}
                                 onChange={(e) => setCommission(Number(e.target.value))}
-                                className="flex-1 accent-[#3B82F6]"
+                                className="flex-1 accent-[#A78BFA]"
                             />
                             <div className="bg-[#0D1321] border border-[#1E293B] rounded-lg px-3 py-2 text-sm text-white font-bold w-16 text-center">
                                 {commission}%
@@ -650,6 +737,33 @@ export default function OffreAhmed() {
                     </div>
                 </div>
 
+                {/* Net Margin Simulator */}
+                {selectedServices.length > 0 && (
+                    <div className={`border rounded-2xl p-6 mb-8 ${ahmedNet >= 0 ? "bg-[#0D1321] border-[#1E293B]" : "bg-[#1a0a0a] border-[#EF4444]/30"}`}>
+                        <h2 className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-4">💰 Simulateur Marge Nette Ahmed</h2>
+                        <div className="grid md:grid-cols-6 gap-4 items-end">
+                            <div className="text-center">
+                                <div className="text-xs text-[#64748B] mb-1">Client paye</div>
+                                <div className="text-xl font-bold text-white">{fmt(totalClient)} €</div>
+                            </div>
+                            <div className="text-center text-[#475569] hidden md:block">−</div>
+                            <div className="text-center">
+                                <div className="text-xs text-[#64748B] mb-1">Bilal + Équipe</div>
+                                <div className="text-xl font-bold text-[#F59E0B]">{fmt(totalCost + teamCosts)} €</div>
+                                <div className="text-[10px] text-[#475569] mt-0.5">{fmt(totalCost)} delivery + {fmt(teamCosts)} commissions</div>
+                            </div>
+                            <div className="text-center text-[#475569] hidden md:block">=</div>
+                            <div className="text-center md:col-span-2">
+                                <div className="text-xs text-[#64748B] mb-1">Ahmed garde</div>
+                                <div className={`text-2xl font-bold ${ahmedNet >= 0 ? "text-[#22C55E]" : "text-[#EF4444]"}`}>
+                                    {ahmedNet >= 0 ? "+" : ""}{fmt(ahmedNet)} €
+                                </div>
+                                <div className="text-xs text-[#475569] mt-0.5">{ahmedNetPct}% du prix client</div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 {/* Summary Bar */}
                 {selectedServices.length > 0 && (
                     <div className="sticky bottom-0 z-50 bg-[#111827]/95 backdrop-blur-sm border border-[#1E293B] rounded-2xl p-6 mb-4">
@@ -658,21 +772,21 @@ export default function OffreAhmed() {
                             <div className="flex items-center gap-8 flex-wrap">
                                 <div>
                                     <div className="text-xs text-[#64748B]">{selectedServices.length} prestation{selectedServices.length > 1 ? "s" : ""}</div>
-                                    <div className="text-xs text-[#64748B] mt-0.5">Coût Bilal</div>
-                                    <div className="text-lg font-bold text-[#A78BFA]">{fmt(totalCost)} €</div>
+                                    <div className="text-xs text-[#64748B] mt-0.5">Client paye</div>
+                                    <div className="text-lg font-bold text-white">{fmt(totalClient)} €</div>
                                 </div>
                                 <div className="text-[#334155] text-lg hidden md:block">→</div>
                                 <div>
                                     <div className="text-xs text-[#64748B]">&nbsp;</div>
-                                    <div className="text-xs text-[#64748B]">Prix client</div>
-                                    <div className="text-lg font-bold text-[#60A5FA]">{fmt(totalClient)} €</div>
+                                    <div className="text-xs text-[#64748B]">Total coûts</div>
+                                    <div className="text-lg font-bold text-[#F59E0B]">{fmt(totalCost + teamCosts)} €</div>
                                 </div>
                                 <div className="text-[#334155] text-lg hidden md:block">=</div>
                                 <div>
                                     <div className="text-xs text-[#64748B]">&nbsp;</div>
-                                    <div className="text-xs text-[#64748B]">Ta marge</div>
-                                    <div className={`text-lg font-bold ${totalMargin >= 0 ? "text-[#22C55E]" : "text-[#EF4444]"}`}>
-                                        {totalMargin >= 0 ? "+" : ""}{fmt(totalMargin)} € <span className="text-sm font-normal">({marginPct}%)</span>
+                                    <div className="text-xs text-[#64748B]">Ahmed net</div>
+                                    <div className={`text-lg font-bold ${ahmedNet >= 0 ? "text-[#22C55E]" : "text-[#EF4444]"}`}>
+                                        {ahmedNet >= 0 ? "+" : ""}{fmt(ahmedNet)} € <span className="text-sm font-normal">({ahmedNetPct}%)</span>
                                     </div>
                                 </div>
                             </div>
