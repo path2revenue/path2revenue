@@ -3,6 +3,12 @@
 import { useState, useRef } from "react";
 
 /* ═══════════════════════════════════════════════════════
+   V0 LAUNCH CONFIG
+   ═══════════════════════════════════════════════════════ */
+const V0_LABEL = "v0 · Tarifs Lancement";
+const V0_EXPIRY = "31 mars 2026";
+
+/* ═══════════════════════════════════════════════════════
    SERVICE CATALOG — only what Bilal delivers
    ═══════════════════════════════════════════════════════ */
 const CATEGORIES = [
@@ -92,29 +98,32 @@ const CATEGORIES = [
         services: [
             {
                 id: "prospection",
-                name: "Système de Prospection",
-                cost: 900,
-                defaultPrice: 1400,
+                name: "Système de Prospection Complet",
+                cost: 1500,
+                defaultPrice: 2800,
                 scope: [
-                    "Définition des canaux d'acquisition",
+                    "Scraping ciblé de prospects qualifiés (LinkedIn, annuaires, bases)",
+                    "Enrichissement de données (emails, postes, entreprises)",
+                    "Segmentation intelligente par IA (scoring, intent signals)",
                     "Setup outil d'outreach (Lemlist ou équiv.)",
-                    "Séquences multicanal (email, LinkedIn, SMS)",
-                    "Enrichissement de données prospects",
-                    "Scoring et priorisation des leads",
-                    "Documentation du process",
+                    "Séquences multicanal automatisées (email + LinkedIn)",
+                    "Priorisation et qualification des leads",
+                    "Documentation complète du système",
                 ],
             },
             {
                 id: "automations",
                 name: "Automatisations Business",
-                cost: 800,
-                defaultPrice: 1200,
+                cost: 1300,
+                defaultPrice: 2400,
                 scope: [
-                    "Workflows lead nurturing (GHL / n8n)",
+                    "Workflows lead nurturing complets (GHL / n8n / Make)",
                     "Relances automatiques no-show / no-decision",
-                    "Notifications sur événements clés",
-                    "Webhooks et intégrations tierces",
-                    "Documentation technique",
+                    "Notifications intelligentes sur événements clés",
+                    "Webhooks et intégrations tierces (CRM, Slack, etc.)",
+                    "Automatisation onboarding client",
+                    "Reporting et alertes automatisées",
+                    "Documentation technique de chaque workflow",
                 ],
             },
             {
@@ -246,7 +255,10 @@ export default function OffreAhmed() {
                             <div className="text-2xl font-bold text-[#0C111D]" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                                 Stars<span className="text-[#3B82F6]">Bridge</span>System
                             </div>
-                            <div className="text-xs text-[#64748B] mt-1">Agency · Digital Growth Partner</div>
+                            <div className="flex items-center gap-2 mt-1">
+                                <span className="text-xs text-[#64748B]">Agency · Digital Growth Partner</span>
+                                <span className="text-[9px] bg-[#F59E0B]/15 text-[#F59E0B] px-1.5 py-0.5 rounded-full font-bold uppercase">{V0_LABEL}</span>
+                            </div>
                         </div>
                         <div className="text-right text-sm">
                             <div className="font-bold text-[#0C111D]">DEVIS N° {devisNumber}</div>
@@ -390,7 +402,10 @@ export default function OffreAhmed() {
 
                 <div className="max-w-[900px] mx-auto px-6 py-12">
                     <div className="text-center mb-12">
-                        <div className="text-xs text-[#A78BFA] uppercase tracking-widest mb-2">Document Interne</div>
+                        <div className="inline-flex items-center gap-2 mb-2">
+                            <span className="text-xs text-[#A78BFA] uppercase tracking-widest">Document Interne</span>
+                            <span className="text-[9px] bg-[#F59E0B]/15 text-[#F59E0B] px-1.5 py-0.5 rounded-full font-bold uppercase">{V0_LABEL}</span>
+                        </div>
                         <h1 className="text-3xl font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             Récap Bilal ← Ahmed
                         </h1>
@@ -501,13 +516,14 @@ export default function OffreAhmed() {
             {/* Header */}
             <header className="border-b border-[#1E293B]/60 py-5 px-6">
                 <div className="max-w-[1100px] mx-auto flex items-center justify-between">
-                    <div>
+                    <div className="flex items-center gap-2">
                         <span className="text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             SBS <span className="text-[#3B82F6]">×</span> Path2Revenue
                         </span>
-                        <span className="text-xs text-[#475569] ml-3">Configurateur de Devis</span>
+                        <span className="text-[10px] bg-[#F59E0B]/15 text-[#F59E0B] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">{V0_LABEL}</span>
+                        <span className="text-xs text-[#475569] ml-2">Configurateur de Devis</span>
                     </div>
-                    <span className="text-xs text-[#475569] tracking-wider uppercase">White-Label</span>
+                    <span className="text-xs text-[#F59E0B]">Valable jusqu'au {V0_EXPIRY}</span>
                 </div>
             </header>
 
