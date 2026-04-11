@@ -20,7 +20,7 @@ export const siteConfig = {
             "système de vente B2B, prospection multicanal, pipeline commercial, cold calling, closing B2B, lead generation, enrichissement données, automatisation CRM, outbound sales, Path2Revenue",
         ogTitle: "Path2Revenue · Système de Vente B2B Clé-en-Main",
         ogDescription: "Système de vente B2B complet, installé en 2-4 semaines. 100K+ € closés personnellement, 500K+ € de pipeline générés pour mes clients. Le système vous appartient.",
-        ogImage: null,
+        ogImage: "/featured_1_system.png",
         lang: "fr",
         favicon: "/logo.png",
     },
