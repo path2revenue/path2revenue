@@ -181,7 +181,7 @@ export const siteConfig = {
         highlightedText: "Complet",
         headlineEnd: "Clé-en-Main",
         subtitle:
-            "Chaque brique est construite sur mesure pour votre offre, votre marché et votre cycle de vente. Objectif : un système autonome qui génère des rendez-vous qualifiés.",
+            "Chaque brique est construite sur mesure pour votre offre, votre marché et votre cycle de vente.\nObjectif : un système autonome qui génère des rendez-vous qualifiés.",
         items: [
             {
                 icon: "target",
