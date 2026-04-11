@@ -22,7 +22,7 @@ export const siteConfig = {
         ogDescription: "Système de vente B2B complet, installé en 2-4 semaines. 100K+ € closés personnellement, 500K+ € de pipeline générés pour mes clients. Le système vous appartient.",
         ogImage: null,
         lang: "fr",
-        favicon: null,
+        favicon: "/logo.png",
     },
 
     /* ─────────────────── DESIGN ─────────────────── */
