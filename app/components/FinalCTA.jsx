@@ -54,7 +54,7 @@ export default function FinalCTA() {
                             className={
                                 cta.style === "primary"
                                     ? `group px-8 py-4 bg-[var(--color-cta)] text-[var(--color-bg-primary)] font-bold ${btnRadius} text-lg hover:bg-[var(--color-cta-hover)] hover:-translate-y-1 transition-all duration-300 shadow-[0_0_0_0_var(--color-cta-glow)] hover:shadow-[0_8px_30px_var(--color-cta-glow)] animate-[pulseGlow_3s_ease-in-out_infinite]`
-                                    : `px-8 py-4 border border-[var(--color-border-hover)] text-[var(--color-text-secondary)] ${btnRadius} text-lg hover:border-[var(--color-accent-light)] hover:text-white transition-all duration-300`
+                                    : `group flex items-center justify-center gap-2 px-8 py-4 border border-[var(--color-border-hover)] text-[var(--color-text-secondary)] ${btnRadius} text-lg hover:bg-white hover:text-black hover:border-white transition-all duration-300`
                             }
                         >
                             {cta.icon === "whatsapp" && <WhatsAppIcon />}
