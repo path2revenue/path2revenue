@@ -97,7 +97,7 @@ export const siteConfig = {
     socialProof: {
         eyebrow: "Ils m'ont fait confiance",
         items: [
-            { text: "Akimbo", image: "/akimbo.png", description: "Gestion complète du Growth Outbound B2B pour le compte de leurs clients" },
+            { text: "Akimbo", image: "/akimbo.png", description: "Gestion du Growth Outbound B2B" },
             { text: "Algolia", image: "/algolia.png", description: "150K€+ de contrats signés issus du pipeline qualifié" },
             { text: "SprintMob", image: "/sprintmob.png", description: "Système de prospection 100% automatisé" },
             { text: "Novashield", image: "/novashield.png", description: "Conseil d'acquisition" },
