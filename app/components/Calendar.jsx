@@ -82,7 +82,7 @@ export default function Calendar() {
                     </div>
 
                     {/* WhatsApp */}
-                    <div className="flex items-center gap-4 justify-end">
+                    <div className="flex flex-col items-center gap-3 justify-end text-center">
                         <p className="text-sm text-[var(--color-text-secondary)]">{data.whatsappCopy}</p>
                         <a
                             href={links.whatsapp}
