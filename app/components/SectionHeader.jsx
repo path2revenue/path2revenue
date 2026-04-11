@@ -39,7 +39,7 @@ export default function SectionHeader({ eyebrow, headline, highlightedText, head
                 <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">
                     {headline} {highlightEl} {headlineEnd}
                 </h2>
-                {subtitle && <p className="whitespace-pre-line text-[var(--color-text-secondary)] max-w-[600px] mx-auto">{subtitle}</p>}
+                {subtitle && <p className="whitespace-pre-line text-[var(--color-text-secondary)] max-w-[800px] mx-auto">{subtitle}</p>}
             </div>
         );
     }
@@ -55,7 +55,7 @@ export default function SectionHeader({ eyebrow, headline, highlightedText, head
                         <h2 className="text-3xl md:text-5xl font-bold mb-3">
                             {headline} {highlightEl} {headlineEnd}
                         </h2>
-                        {subtitle && <p className="whitespace-pre-line text-[var(--color-text-secondary)] max-w-[600px]">{subtitle}</p>}
+                        {subtitle && <p className="whitespace-pre-line text-[var(--color-text-secondary)] max-w-[800px]">{subtitle}</p>}
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ export default function SectionHeader({ eyebrow, headline, highlightedText, head
             <h2 className="text-3xl md:text-4xl font-semibold mt-4 mb-4 max-w-[700px]">
                 {headline} {highlightEl} {headlineEnd}
             </h2>
-            {subtitle && <p className="whitespace-pre-line text-[var(--color-text-secondary)] max-w-[550px]">{subtitle}</p>}
+            {subtitle && <p className="whitespace-pre-line text-[var(--color-text-secondary)] max-w-[800px]">{subtitle}</p>}
         </div>
     );
 }
