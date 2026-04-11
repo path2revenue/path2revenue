@@ -112,7 +112,7 @@ export const siteConfig = {
         headline: "Votre Prospection B2B Est Restée",
         highlightedText: "Bloquée Au Stade Artisanal",
         subtitle:
-            "Votre offre est solide. Mais votre génération de revenus repose soit sur un réseau qui s'essouffle, soit sur de la prospection manuelle, usante et impossible à scaler.",
+            "Votre offre est solide.\nMais votre génération de revenus repose soit sur un réseau qui s'essouffle, soit sur de la prospection manuelle, usante et impossible à scaler.",
         items: [
             {
                 icon: "trending-down",
