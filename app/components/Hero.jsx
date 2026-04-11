@@ -276,7 +276,7 @@ function Stats({ stats, border }) {
     return (
         <div className={`grid grid-cols-2 ${stats.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"} gap-6 max-w-[900px] mx-auto animate-[fadeInUp_1.3s_ease-out] pt-8 mt-4 ${border ? "border-t border-[var(--color-border-default)]" : ""}`}>
             {stats.map((stat, i) => (
-                <div key={i} className="text-center">
+                <div key={i} className={`text-center ${i === 2 && stats.length === 3 ? "col-span-2 md:col-span-1" : ""}`}>
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--color-gradient-from)] to-[var(--color-gradient-to)] bg-clip-text text-transparent">
                         <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                     </div>
