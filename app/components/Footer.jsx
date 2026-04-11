@@ -1,4 +1,5 @@
 import { siteConfig } from "@/site.config";
+import { Linkedin } from "lucide-react";
 
 export default function Footer() {
     const { footer } = siteConfig;
@@ -9,7 +10,10 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
                     {/* Brand */}
                     <div className="text-center md:text-left">
-                        <div className="text-lg font-bold text-[var(--color-text-primary)] mb-2">{footer.brand}</div>
+                        <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
+                            {footer.logo && <img src={footer.logo} alt={footer.brand} className="w-7 h-7" />}
+                            <span className="text-lg font-bold text-[var(--color-text-primary)]">{footer.brand}</span>
+                        </div>
                         <p className="text-sm text-[var(--color-text-muted)] max-w-[300px]">{footer.tagline}</p>
                     </div>
 
@@ -29,8 +33,8 @@ export default function Footer() {
                     {footer.socials?.length > 0 && (
                         <div className="flex gap-4">
                             {footer.socials.map((s, i) => (
-                                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors text-sm">
-                                    {s.platform}
+                                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[#0077b5] transition-colors" aria-label={s.platform}>
+                                    {s.platform === 'linkedin' ? <Linkedin className="w-5 h-5" /> : s.platform}
                                 </a>
                             ))}
                         </div>

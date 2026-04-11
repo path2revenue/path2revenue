@@ -16,7 +16,7 @@ export default function FAQ() {
     }, []);
 
     return (
-        <section id="faq" ref={ref} className="py-24 px-6">
+        <section id="faq" ref={ref} className="py-16 px-6">
             <div className={`max-w-[800px] mx-auto transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
                 <div className="text-center mb-16">
                     <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)] font-semibold">{data.eyebrow}</span>

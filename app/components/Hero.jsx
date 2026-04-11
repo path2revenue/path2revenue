@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { siteConfig } from "@/site.config";
+import { Target, Mail, Rocket, Database, TrendingUp, Users, Zap, LineChart } from "lucide-react";
 
 const layout = siteConfig.design?.layout || "centered";
 
@@ -79,9 +80,10 @@ function HeroCentered({ hero }) {
     return (
         <section className="relative flex flex-col items-center justify-center overflow-hidden pt-24 pb-16">
             <MeshBG />
+            <FloatingElements />
             <div className="relative z-10 max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center text-center">
                 <Eyebrow text={hero.eyebrow} />
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.08] tracking-tight max-w-3xl mb-4 animate-[fadeInUp_0.8s_ease-out]">
+                <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.08] tracking-tight max-w-5xl mb-4 animate-[fadeInUp_0.8s_ease-out]">
                     {hero.headline}{" "}
                     <GradientText>{hero.highlightedText}</GradientText>{" "}
                     <span className="text-[var(--color-text-primary)]">{hero.headlineEnd}</span>
@@ -105,12 +107,13 @@ function HeroEditorial({ hero }) {
     return (
         <section className="relative overflow-hidden pt-24 pb-16">
             <MeshBG />
+            <FloatingElements />
             <div className="relative z-10 max-w-[1200px] mx-auto px-6 w-full">
                 <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
                     {/* LEFT: Text */}
                     <div>
                         <Eyebrow text={hero.eyebrow} />
-                        <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.1] tracking-tight mb-4 animate-[fadeInUp_0.8s_ease-out]">
+                        <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.1] tracking-tight mb-4 max-w-5xl animate-[fadeInUp_0.8s_ease-out]">
                             {hero.headline}{" "}
                             <GradientText>{hero.highlightedText}</GradientText>{" "}
                             <span className="text-[var(--color-text-primary)]">{hero.headlineEnd}</span>
@@ -136,9 +139,11 @@ function HeroEditorial({ hero }) {
 function HeroMinimal({ hero }) {
     return (
         <section className="relative overflow-hidden pt-20 pb-20">
+            <MeshBG />
+            <FloatingElements />
             <div className="relative z-10 max-w-[720px] mx-auto px-6 w-full">
                 <Eyebrow text={hero.eyebrow} />
-                <h1 className="text-3xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-6 animate-[fadeInUp_0.8s_ease-out]">
+                <h1 className="text-3xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-6 max-w-5xl animate-[fadeInUp_0.8s_ease-out]">
                     {hero.headline}{" "}
                     <GradientText>{hero.highlightedText}</GradientText>{" "}
                     <span className="text-[var(--color-text-primary)]">{hero.headlineEnd}</span>
@@ -167,6 +172,60 @@ function MeshBG() {
     );
 }
 
+function FloatingElements() {
+    return (
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none hidden md:block">
+            {/* Top Right Target */}
+            <div className="absolute top-[15%] right-[8%] w-24 h-24 text-[var(--color-accent)] opacity-[0.6] animate-[float_6s_ease-in-out_infinite] rotate-12">
+                <Target size={96} strokeWidth={1} />
+            </div>
+            
+            {/* Bottom Left Mail */}
+            <div className="absolute bottom-[20%] left-[5%] w-20 h-20 text-[var(--color-success)] opacity-[0.6] animate-[float_8s_ease-in-out_infinite_reverse] -rotate-12">
+                <Mail size={80} strokeWidth={1} />
+            </div>
+
+            {/* Top Left TrendingUp */}
+            <div className="absolute top-[25%] left-[10%] w-16 h-16 text-[var(--color-gradient-to)] opacity-[0.6] animate-[float_7s_ease-in-out_infinite] rotate-45">
+                <TrendingUp size={64} strokeWidth={1} />
+            </div>
+
+            {/* Bottom Right Database */}
+            <div className="absolute bottom-[25%] right-[12%] w-16 h-16 text-[var(--color-accent-light)] opacity-[0.6] animate-[float_9s_ease-in-out_infinite] -rotate-6">
+                <Database size={64} strokeWidth={1} />
+            </div>
+            
+            {/* Middle Left Users */}
+            <div className="absolute top-[60%] left-[8%] w-12 h-12 text-[var(--color-gradient-from)] opacity-[0.6] animate-[float_5s_ease-in-out_infinite_reverse] -rotate-12">
+                <Users size={48} strokeWidth={1} />
+            </div>
+
+            {/* Middle Right Zap */}
+            <div className="absolute top-[45%] right-[5%] w-14 h-14 text-[var(--color-cta)] opacity-[0.6] animate-[float_7s_ease-in-out_infinite] rotate-12">
+                <Zap size={56} strokeWidth={1} />
+            </div>
+
+            {/* Middle-Bottom Left LineChart */}
+            <div className="absolute bottom-[35%] left-[12%] w-20 h-20 text-[var(--color-accent)] opacity-[0.6] animate-[float_8s_ease-in-out_infinite_reverse] rotate-6">
+                <LineChart size={80} strokeWidth={1} />
+            </div>
+
+            {/* Very Bottom Right Geometric ring */}
+            <div className="absolute bottom-[10%] right-[5%] animate-[spin_20s_linear_infinite] opacity-[0.6]">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="60" cy="60" r="50" stroke="url(#paint0_linear)" strokeWidth="2" strokeDasharray="8 8"/>
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+                            <stop stopColor="var(--color-gradient-from)" />
+                            <stop offset="1" stopColor="var(--color-gradient-to)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    );
+}
+
 function Eyebrow({ text }) {
     if (!text) return null;
     return (
@@ -189,7 +248,7 @@ function Sub({ html, center }) {
     if (!html) return null;
     return (
         <p
-            className={`text-base md:text-lg text-[var(--color-text-secondary)] max-w-[550px] leading-relaxed mb-2 animate-[fadeInUp_1s_ease-out] ${center ? "mx-auto text-center" : ""}`}
+            className={`text-base md:text-lg text-[var(--color-text-secondary)] max-w-4xl leading-relaxed mb-2 animate-[fadeInUp_1s_ease-out] ${center ? "mx-auto text-center" : ""}`}
             dangerouslySetInnerHTML={{ __html: html }}
         />
     );
@@ -215,7 +274,7 @@ function VSL({ url, title }) {
 function Stats({ stats, border }) {
     if (!stats) return null;
     return (
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[900px] mx-auto animate-[fadeInUp_1.3s_ease-out] pt-8 mt-4 ${border ? "border-t border-[var(--color-border-default)]" : ""}`}>
+        <div className={`grid grid-cols-2 ${stats.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"} gap-6 max-w-[900px] mx-auto animate-[fadeInUp_1.3s_ease-out] pt-8 mt-4 ${border ? "border-t border-[var(--color-border-default)]" : ""}`}>
             {stats.map((stat, i) => (
                 <div key={i} className="text-center">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--color-gradient-from)] to-[var(--color-gradient-to)] bg-clip-text text-transparent">

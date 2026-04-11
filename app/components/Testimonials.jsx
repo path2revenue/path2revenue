@@ -107,7 +107,7 @@ export default function Testimonials() {
     const { testimonials: data } = siteConfig;
 
     return (
-        <section className="py-24 px-6 bg-[var(--color-bg-surface)]/30">
+        <section className="py-16 px-6 bg-[var(--color-bg-surface)]/30">
             <div className="max-w-[1200px] mx-auto">
                 <SectionHeader
                     eyebrow={data.eyebrow}

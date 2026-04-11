@@ -27,6 +27,7 @@ export default function Navbar() {
             <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-2 text-[var(--color-text-primary)] font-bold text-lg">
+                    {navbar.logo.image && <img src={navbar.logo.image} alt={navbar.logo.text} className="w-7 h-7" />}
                     {navbar.logo.emoji && <span className="text-xl">{navbar.logo.emoji}</span>}
                     <span className="hidden sm:inline">{navbar.logo.text}</span>
                 </a>

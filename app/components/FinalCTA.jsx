@@ -28,16 +28,16 @@ export default function FinalCTA() {
     }, []);
 
     return (
-        <section ref={ref} className="py-24 px-6 relative overflow-hidden">
+        <section ref={ref} className="py-16 px-6 relative overflow-hidden">
             {/* Background glows */}
             <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-[var(--color-accent)]/5 rounded-full blur-[150px] pointer-events-none" />
             <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-[var(--color-cta)]/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className={`relative max-w-[700px] mx-auto text-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-                <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)] font-semibold">{data.eyebrow}</span>
-                <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">
-                    {data.headline}{" "}
-                    <span className="bg-gradient-to-r from-[var(--color-gradient-from)] to-[var(--color-gradient-to)] bg-clip-text text-transparent animate-[gradientShift_6s_ease_infinite] bg-[length:200%_auto]">
+                <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)] font-semibold whitespace-pre-line">{data.eyebrow}</span>
+                <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4 whitespace-pre-line">
+                    {data.headline}
+                    <span className="bg-gradient-to-r from-[var(--color-gradient-from)] to-[var(--color-gradient-to)] bg-clip-text text-transparent animate-[gradientShift_6s_ease_infinite] bg-[length:200%_auto] block mt-2">
                         {data.highlightedText}
                     </span>{" "}
                     {data.headlineEnd}
