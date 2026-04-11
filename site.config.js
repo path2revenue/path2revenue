@@ -112,7 +112,7 @@ export const siteConfig = {
         headline: "Votre Prospection B2B Est Restée",
         highlightedText: "Bloquée Au Stade Artisanal",
         subtitle:
-            "Votre offre est solide.\nMais votre génération de revenus repose soit sur un réseau qui s'essouffle, soit sur de la prospection manuelle, usante et impossible à scaler.",
+            "Votre offre est solide. Mais votre acquisition repose sur un réseau qui s'épuise ou une prospection manuelle, usante et impossible à scaler.",
         items: [
             {
                 icon: "trending-down",
@@ -151,7 +151,7 @@ export const siteConfig = {
         headline: "Le Marché Parle.",
         highlightedText: "Je Construis.",
         subtitle:
-            "La plupart des prestataires créent de la dépendance ou livrent du conseil sans exécution. Mon approche : on design le système ensemble, je le construis, le teste, et vous le transmets.",
+            "La plupart créent de la dépendance ou conseillent sans exécuter. Mon approche : On design ensemble, je construis, je teste et je transmets.",
         items: [
             {
                 metric: "Agences outbound",
@@ -181,7 +181,7 @@ export const siteConfig = {
         highlightedText: "Complet",
         headlineEnd: "Clé-en-Main",
         subtitle:
-            "Chaque brique est construite sur mesure pour votre offre, votre marché et votre cycle de vente.\nObjectif : un système autonome qui génère des rendez-vous qualifiés.",
+            "Chaque brique est sur-mesure pour votre offre, marché et cycle de vente. Objectif : un système autonome générant des rendez-vous qualifiés.",
         items: [
             {
                 icon: "target",

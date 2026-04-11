@@ -63,7 +63,7 @@ function CTAButton({ cta }) {
             className={
                 cta.style === "primary"
                     ? `group px-8 py-4 bg-[var(--color-cta)] text-[var(--color-bg-primary)] font-bold ${btnRadius} text-lg hover:bg-[var(--color-cta-hover)] transition-all duration-300 cursor-pointer`
-                    : `group flex items-center justify-center gap-2 px-8 py-4 border border-[var(--color-border-hover)] text-[var(--color-text-secondary)] ${btnRadius} text-lg hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer`
+                    : `group flex items-center justify-center gap-2 px-8 py-4 border border-[var(--color-border-hover)] text-[var(--color-text-secondary)] ${btnRadius} text-lg ${cta.icon === "whatsapp" ? "hover:bg-[#25D366] hover:text-white hover:border-[#25D366]" : "hover:bg-white hover:text-black hover:border-white"} transition-all duration-300 cursor-pointer`
             }
         >
             {cta.icon === "whatsapp" && <WhatsAppIcon />}

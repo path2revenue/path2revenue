@@ -44,24 +44,36 @@ export default function FinalCTA() {
                 </h2>
                 <p className="text-[var(--color-text-secondary)] mb-10 max-w-[500px] mx-auto">{data.subtitle}</p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                    {data.ctas.map((cta, i) => (
-                        <a
-                            key={i}
-                            href={resolveHref(cta.href)}
-                            target={cta.href === "__whatsapp__" ? "_blank" : undefined}
-                            rel={cta.href === "__whatsapp__" ? "noopener noreferrer" : undefined}
-                            className={
-                                cta.style === "primary"
-                                    ? `group px-8 py-4 bg-[var(--color-cta)] text-[var(--color-bg-primary)] font-bold ${btnRadius} text-lg hover:bg-[var(--color-cta-hover)] hover:-translate-y-1 transition-all duration-300 shadow-[0_0_0_0_var(--color-cta-glow)] hover:shadow-[0_8px_30px_var(--color-cta-glow)] animate-[pulseGlow_3s_ease-in-out_infinite]`
-                                    : `group flex items-center justify-center gap-2 px-8 py-4 border border-[var(--color-border-hover)] text-[var(--color-text-secondary)] ${btnRadius} text-lg hover:bg-white hover:text-black hover:border-white transition-all duration-300`
-                            }
-                        >
-                            {cta.icon === "whatsapp" && <WhatsAppIcon />}
-                            {cta.text}
-                            {cta.arrow && <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>}
-                        </a>
-                    ))}
+                <div className="flex flex-col items-center justify-center gap-6 mb-8 w-full max-w-md mx-auto">
+                    {data.ctas.map((cta, i) => {
+                        if (cta.style === "primary") {
+                            return (
+                                <a
+                                    key={i}
+                                    href={resolveHref(cta.href)}
+                                    className={`group w-full sm:w-auto px-8 py-4 bg-[var(--color-cta)] text-[var(--color-bg-primary)] font-bold ${btnRadius} text-lg hover:bg-[var(--color-cta-hover)] hover:-translate-y-1 transition-all duration-300 shadow-[0_0_0_0_var(--color-cta-glow)] hover:shadow-[0_8px_30px_var(--color-cta-glow)] animate-[pulseGlow_3s_ease-in-out_infinite]`}
+                                >
+                                    {cta.text}
+                                    {cta.arrow && <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>}
+                                </a>
+                            );
+                        }
+                        return (
+                            <div key={i} className="flex flex-col items-center mt-2 w-full sm:w-auto">
+                                <span className="text-[var(--color-text-muted)] text-sm mb-3">Vous préférez échanger directement ?</span>
+                                <a
+                                    href={resolveHref(cta.href)}
+                                    target={cta.href === "__whatsapp__" ? "_blank" : undefined}
+                                    rel={cta.href === "__whatsapp__" ? "noopener noreferrer" : undefined}
+                                    className={`group flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-3 border border-[var(--color-border-hover)] text-[var(--color-text-secondary)] ${btnRadius} text-base ${cta.icon === "whatsapp" ? "hover:bg-[#25D366] hover:text-white hover:border-[#25D366]" : "hover:bg-white hover:text-black hover:border-white"} transition-all duration-300`}
+                                >
+                                    {cta.icon === "whatsapp" && <WhatsAppIcon />}
+                                    {cta.text}
+                                    {cta.arrow && <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>}
+                                </a>
+                            </div>
+                        );
+                    })}
                 </div>
 
                 {data.badges && (
