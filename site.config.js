@@ -19,7 +19,7 @@ export const siteConfig = {
         keywords:
             "système de vente B2B, prospection multicanal, pipeline commercial, cold calling, closing B2B, lead generation, enrichissement données, automatisation CRM, outbound sales, Path2Revenue",
         ogTitle: "Path2Revenue · Système de Vente B2B Clé-en-Main",
-        ogDescription: "Système de vente B2B complet, installé en 2-4 semaines. 100K+ closés, +500K € générés pour mes clients. Le système vous appartient.",
+        ogDescription: "Système de vente B2B complet, installé en 2-4 semaines. 100K+ € closés personnellement, 500K+ € de pipeline générés pour mes clients. Le système vous appartient.",
         ogImage: null,
         lang: "fr",
         favicon: null,
@@ -83,8 +83,8 @@ export const siteConfig = {
         ],
         stats: [
             { value: 12, suffix: "+", label: "systèmes de vente construits" },
-            { value: 100, suffix: "K+", label: "euros closés sur mes propres offres" },
-            { value: 500, suffix: "K+", label: "euros de revenus et pipeline générés pour mes clients" },
+            { value: 100, suffix: "K+", label: "euros closés personnellement" },
+            { value: 500, suffix: "K+", label: "euros de pipeline générés pour mes clients" },
         ],
         trustBadges: [
             "Diagnostic 100% gratuit",
@@ -284,7 +284,7 @@ export const siteConfig = {
             "Je ne promets pas \"100 clients en 30 jours.\" Ce serait malhonnête.",
             "Ma méthode est simple : on pense votre système de vente ensemble, je le construis, le teste sur le terrain, et je vous le livre opérationnel. Pas de commission mensuelle, pas d'abonnement. Le budget est discuté ensemble directement.",
             "Mon background de développeur (10+ ans) me permet de garantir des systèmes techniquement robustes : scraping, enrichissement, scoring IA, automatisations. Ce n'est pas du conseil abstrait. C'est de l'exécution.",
-            "12+ systèmes installés. 100K+ € closés sur mes propres offres. +500K € de revenus et pipeline générés pour mes clients.",
+            "12+ systèmes installés. 100K+ € closés personnellement. 500K+ € de pipeline générés pour mes clients.",
         ],
         signature: { name: "Bilal EL-JINDI", role: "Fondateur, Path2Revenue", linkedin: "https://linkedin.com/in/beljindi" },
     },
@@ -365,7 +365,7 @@ export const siteConfig = {
                 icon: "whatsapp",
             },
         ],
-        badges: ["Diagnostic gratuit", "+500K € générés pour mes clients", "Système livré en 2-4 semaines"],
+        badges: ["Diagnostic gratuit", "500K+ € de pipeline générés pour mes clients", "Système livré en 2-4 semaines"],
     },
 
     /* ─────────────────── FOOTER ─────────────────── */
