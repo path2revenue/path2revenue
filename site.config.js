@@ -100,7 +100,7 @@ export const siteConfig = {
             { text: "Akimbo", image: "/akimbo.png", description: "Gestion du Growth Outbound B2B" },
             { text: "Algolia", image: "/algolia.png", description: "150K€+ de contrats signés issus du pipeline qualifié" },
             { text: "SprintMob", image: "/sprintmob.png", description: "Système de prospection 100% automatisé" },
-            { text: "Novashield", image: "/novashield.png", description: "Conseil d'acquisition" },
+            { text: "Novashield", image: "/logo_novashield_black.svg", description: "Conseil d'acquisition" },
             { text: "Programme Réitère", image: "/imrane.png", description: "Closing B2B sur offres High-Ticket" },
             { text: "StarsBridgeSystem", image: "/starsbridgesystem.png", description: "Structuration CRM et pipelines" },
         ],
