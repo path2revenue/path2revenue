@@ -413,13 +413,37 @@ export const siteConfig = {
         backLink: { text: "← Retour au site", url: "/" },
     },
 
+    /* ─────────────────── INLINE CTAs ─────────────────── */
+    inlineCTAs: {
+        "1": {
+            text: "Vous vous reconnaissez ?",
+            highlightedText: "Parlons-en.",
+            ctas: [
+                { text: "Réserver Mon Diagnostic Gratuit", href: "#rdv", style: "primary", arrow: true },
+                { text: "WhatsApp", href: "__whatsapp__", style: "secondary", icon: "whatsapp" },
+            ],
+            microcopy: "30 min · Gratuit · Sans engagement",
+        },
+        "2": {
+            text: "Prêt à passer à l'action ?",
+            highlightedText: "Votre système vous attend.",
+            ctas: [
+                { text: "Réserver Mon Diagnostic Gratuit", href: "#rdv", style: "primary", arrow: true },
+                { text: "WhatsApp", href: "__whatsapp__", style: "secondary", icon: "whatsapp" },
+            ],
+            microcopy: "Système livré en 2-4 semaines · Le système vous appartient",
+        },
+    },
+
     /* ─────────────────── SECTIONS ORDER ─────────────────── */
     sections: [
         "hero",
         "socialProof",
         "painPoints",
+        "inlineCTA1",
         "results",
         "services",
+        "inlineCTA2",
         "process",
         "honesty",
         "calendar",

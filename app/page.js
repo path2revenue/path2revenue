@@ -12,6 +12,7 @@ import Calendar from "./components/Calendar";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
+import InlineCTA from "./components/InlineCTA";
 import Footer from "./components/Footer";
 
 /* ─── Map section keys to components ─── */
@@ -28,6 +29,8 @@ const SECTION_MAP = {
   testimonials: Testimonials,
   faq: FAQ,
   finalCTA: FinalCTA,
+  inlineCTA1: () => <InlineCTA variant="1" />,
+  inlineCTA2: () => <InlineCTA variant="2" />,
 };
 
 export default function Home() {
