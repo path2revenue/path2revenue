@@ -1,9 +1,9 @@
 /** ============================================================
  *  SITE CONFIG — PATH2REVENUE
  *  ============================================================
- *  Bilal EL-JINDI · Architecte de systèmes de vente B2B
- *  Système de vente clé-en-main livré en 2-4 semaines
- *  Aligné : offer.md v2 + LinkedIn Profile v2 + GEMINI.md
+ *  Bilal EL-JINDI · Systèmes d'acquisition B2B
+ *  Pour ceux qui vendent déjà mais sans système prévisible
+ *  Aligné : offer.md v2 + LinkedIn Profile v2 + GEMINI.md + Habib review
  *  ============================================================ */
 
 const WA_NUMBER = "33761941267";
@@ -13,13 +13,13 @@ const WA_MESSAGE = (ctx) =>
 export const siteConfig = {
     /* ─────────────────── META & SEO ─────────────────── */
     meta: {
-        title: "Path2Revenue · Votre Système de Vente B2B Installé en 2 Semaines",
+        title: "Path2Revenue · Votre Système d'Acquisition B2B Installé en 2 Semaines",
         description:
-            "Système de vente B2B complet installé en 2 à 4 semaines. Prospection multicanal, pipeline structuré, frameworks de vente, automatisations. Le système vous appartient.",
+            "Vous vendez déjà mais votre acquisition dépend du réseau et du bouche-à-oreille. Un système d'acquisition prévisible, installé en 2 à 4 semaines, clé en main. Le système vous appartient.",
         keywords:
-            "système de vente B2B, prospection multicanal, pipeline commercial, cold calling, closing B2B, lead generation, enrichissement données, automatisation CRM, outbound sales, Path2Revenue",
-        ogTitle: "Path2Revenue · Système de Vente B2B Clé-en-Main",
-        ogDescription: "Système de vente B2B complet, installé en 2-4 semaines. 100K+ € closés personnellement, 500K+ € de pipeline générés pour mes clients. Le système vous appartient.",
+            "système acquisition B2B, prospection multicanal, pipeline commercial, acquisition prévisible, lead generation, outbound sales, Path2Revenue",
+        ogTitle: "Path2Revenue · Système d'Acquisition B2B Prévisible",
+        ogDescription: "Vous vendez mais sans contrôle. Un système d'acquisition B2B prévisible, installé en 2-4 semaines. 500K+ € de pipeline générés. Le système vous appartient.",
         ogImage: "/featured_1_system.jpg",
         lang: "fr",
         favicon: "/logo.png",
@@ -59,12 +59,12 @@ export const siteConfig = {
 
     /* ─────────────────── HERO ─────────────────── */
     hero: {
-        eyebrow: { text: "Architecte de systèmes de vente B2B", dot: true },
-        headline: "Votre Système de Vente B2B",
-        highlightedText: "Installé en 2 Semaines.",
+        eyebrow: { text: "Pour ceux qui vendent déjà, mais pas de manière prévisible", dot: true },
+        headline: "Vous Vendez. Mais Vous Ne Contrôlez Pas",
+        highlightedText: "Comment.",
         headlineEnd: "",
         subheadline:
-            'Prospection multicanal, pipeline structuré, frameworks de vente, automatisations. <strong>Le système vous appartient.</strong> Pas d\'abonnement. Pas de dépendance.',
+            'Votre offre marche. Vos clients sont satisfaits. Mais votre acquisition dépend de votre réseau, du bouche-à-oreille ou d\'une poignée de contacts. <strong>Je vous installe un système qui génère des rendez-vous qualifiés, sans dépendance.</strong> En 2 semaines.',
         vslUrl: null,
         vslTitle: null,
         ctas: [
@@ -82,8 +82,8 @@ export const siteConfig = {
             },
         ],
         stats: [
-            { value: 12, suffix: "+", label: "systèmes de vente construits" },
-            { value: 100, suffix: "K+", label: "euros closés personnellement" },
+            { value: 12, suffix: "+", label: "systèmes d'acquisition construits" },
+            { value: 20, suffix: "K+", label: "prospects qualifiés traités" },
             { value: 500, suffix: "K+", label: "euros de pipeline générés pour mes clients" },
         ],
         trustBadges: [
@@ -109,113 +109,113 @@ export const siteConfig = {
     /* ─────────────────── PAIN POINTS ─────────────────── */
     painPoints: {
         eyebrow: "Vous Vous Reconnaissez ?",
-        headline: "Votre Prospection B2B Est Restée",
-        highlightedText: "Bloquée Au Stade Artisanal",
+        headline: "Ça Tourne. Mais Vous Savez",
+        highlightedText: "Que C'est Fragile.",
         subtitle:
-            "Votre offre est solide. Mais votre acquisition repose sur un réseau qui s'épuise ou une prospection manuelle, usante et impossible à scaler.",
+            "Votre offre marche. Vos clients sont satisfaits. Mais votre prochain contrat, vous ne savez pas d'où il viendra.",
         items: [
             {
                 icon: "trending-down",
-                title: "Croissance sur pause",
+                title: "Vous vendez grâce à votre réseau",
                 description:
-                    "Le bouche-à-oreille et votre réseau ont marché jusqu'ici. Mais aujourd'hui, vous stagnez. Il est difficile de prévoir combien de contrats vous allez signer le mois prochain.",
-                stat: "Recommandations ≠ Scalable",
+                    "Recommandations, anciens clients, contacts LinkedIn. Ça génère du CA. Mais vous ne décidez ni du volume, ni du timing. Le jour où ça ralentit, vous le subissez.",
+                stat: "Réseau ≠ Système",
             },
             {
                 icon: "layers",
-                title: "Un système épuisant",
+                title: "Vous dépendez d'un levier que vous ne contrôlez pas",
                 description:
-                    "Vous avez déjà essayé d'automatiser ou d'empiler des outils métiers. Résultat : vous passez 80% de votre temps sur la gestion technique et logistique, au lieu de Closer.",
-                stat: "Outils empilés = Temps perdu",
-            },
-            {
-                icon: "database",
-                title: "Données non qualifiées",
-                description:
-                    "Vos listes d'envoi manquent de scoring. Conséquence : des taux de réponse faméliques, et un risque permanent pour la réputation de votre domaine d'envoi (blacklist).",
-                stat: "Data pauvre = Zéro réponse",
+                    "Un apporteur d'affaires. Un client historique qui représente la moitié de votre CA. L'algorithme LinkedIn. Si un seul de ces leviers lâche, votre pipe se vide.",
+                stat: "Dépendance = Fragilité",
             },
             {
                 icon: "clock",
-                title: "Au four et au moulin",
+                title: "Vous alternez entre production et prospection",
                 description:
-                    "Freelance premium, associé de cabinet, dirigeant d'agence ou de PME : vous produisez ET vous vendez. Dès que vous rentrez en production, la prospection s'arrête net.",
-                stat: "Production = Outbound en pause",
+                    "Quand vous livrez, vous ne vendez pas. Quand vous vendez, vous ne livrez pas. Vous n'avez jamais les deux en même temps. Et le cycle recommence à chaque fois.",
+                stat: "Production = Prospection en pause",
+            },
+            {
+                icon: "bar-chart-2",
+                title: "Vous ne pouvez pas prévoir votre CA à 3 mois",
+                description:
+                    "Pas parce que votre offre est mauvaise. Parce qu'il n'y a pas de système derrière. Juste de l'intuition et de l'espoir.",
+                stat: "Pas de chiffres = Pas de système",
             },
         ],
     },
 
     /* ─────────────────── RESULTS (Différenciation) ─────────────────── */
     results: {
-        eyebrow: "Pourquoi Path2Revenue",
-        headline: "Le Marché Parle.",
-        highlightedText: "Je Construis.",
+        eyebrow: "Vous Avez Peut-Être Déjà Essayé",
+        headline: "La Différence Entre Vendre Et",
+        highlightedText: "Avoir Un Système.",
         subtitle:
-            "La plupart créent de la dépendance ou conseillent sans exécuter. Mon approche : On design ensemble, je construis, je teste et je transmets.",
+            "Vous avez déjà tenté de structurer votre acquisition. Voilà pourquoi ça n'a pas tenu.",
         items: [
             {
-                metric: "Agences outbound",
-                label: "Facturent au mois, gardent le système",
-                description: "Je construis votre machine avec vous en 2-4 semaines, je vous transmets tout, et je m'efface. Le système vous appartient.",
-                badge: "Forfait unique",
+                metric: "Le réseau seul",
+                label: "Il vous a amené vos premiers clients, mais il ne scale pas",
+                description: "Vous ne décidez pas quand il produit. Et quand il ralentit, vous n'avez rien pour compenser. Ici : un système que vous contrôlez.",
+                badge: "Vous décidez du volume",
             },
             {
-                metric: "Consultants sales",
-                label: "Conseillent, font des slides, ne construisent rien",
-                description: "On valide la stratégie ensemble, puis j'exécute le reste : enrichissement, séquences, frameworks, pipeline, automatisations.",
-                badge: "Exécution",
+                metric: "L'agence ou le freelance",
+                label: "Vous avez délégué, mais sans résultat mesurable",
+                description: "Pas de méthode, pas de données qualifiées, pas de transmission. Le jour où vous arrêtez de payer, tout s'arrête. Ici : le système vous appartient.",
+                badge: "Forfait unique, pas d'abonnement",
             },
             {
-                metric: "Coaches",
-                label: "Enseignent la théorie, le client se débrouille",
-                description: "Je vous livre un système sur-mesure, opérationnel et documenté, avec formation et support 30 jours inclus.",
-                badge: "Système livré",
+                metric: "Le faire vous-même",
+                label: "Vous avez testé un outil, envoyé 50 emails, abandonné",
+                description: "Normal. Sans process, sans données qualifiées, sans cadence, ça ne tient pas. Ici : je le construis, vous l'opérez.",
+                badge: "Process éprouvé",
             },
         ],
     },
 
     /* ─────────────────── SERVICES ─────────────────── */
     services: {
-        eyebrow: "Ce Que Je Livre",
-        headline: "Un Système de Vente",
+        eyebrow: "Ce Que Je Construis Pour Vous",
+        headline: "Un Système d'Acquisition",
         highlightedText: "Complet",
         headlineEnd: "Clé-en-Main",
         subtitle:
-            "Chaque brique est sur-mesure pour votre offre, marché et cycle de vente. Objectif : un système autonome générant des rendez-vous qualifiés.",
+            "Chaque brique est construite sur mesure pour votre offre, votre marché et votre cycle de vente. Vous repartez avec un système autonome qui génère des rendez-vous qualifiés.",
         items: [
             {
                 icon: "target",
-                title: "Offre Clarifiée + ICP Mappé",
+                title: "Votre Client Idéal, Défini avec Précision",
                 description:
-                    "Votre proposition de valeur en 30 secondes. Votre client idéal défini avec précision : secteur, taille, signaux d'achat, critères d'exclusion.",
+                    "On pose exactement qui vous ciblez : secteur, taille, signaux d'achat, critères d'exclusion. Plus de messages envoyés au hasard.",
                 badge: "Phase 1",
             },
             {
                 icon: "database",
-                title: "Base de Données Qualifiée",
+                title: "Votre Base de Contacts Qualifiée",
                 description:
-                    "Scraping, enrichissement (email, téléphone, LinkedIn), scoring algorithmique. Contacts qualifiés, vérifiés et prêts à être contactés.",
+                    "Scraping, enrichissement (email, téléphone, LinkedIn), scoring. Des contacts vérifiés et prêts à être contactés. Pas des listes achetées en vrac.",
                 badge: "Phase 2",
             },
             {
                 icon: "mail",
                 title: "Infrastructure Email Anti-Spam",
                 description:
-                    "Domaines dédiés, SPF/DKIM/DMARC configurés, warm-up, délivrabilité testée. Vos emails arrivent en boîte de réception.",
+                    "Domaines dédiés, SPF/DKIM/DMARC configurés, warm-up, délivrabilité testée. Vos emails arrivent en boîte de réception, pas en spam.",
                 badge: "Phase 2",
             },
             {
                 icon: "layers",
-                title: "Séquences Multicanal",
+                title: "Séquences Multicanal Personnalisées",
                 description:
-                    "Email + LinkedIn + Cold Call. Séquences personnalisées à 3 niveaux de profondeur, adaptées à votre ICP.",
+                    "Email + LinkedIn + Cold Call. Des séquences qui parlent de la situation de votre prospect, pas des templates copiés-collés.",
                 badge: "Phase 2",
             },
             {
                 icon: "phone-call",
-                title: "Approches Cold Call + Stratégies",
+                title: "Scripts de Prospection + Closing",
                 description:
-                    "Frameworks de prospection téléphonique, stratégies de closing, battle cards concurrentielles, gestion des objections.",
+                    "Frameworks de qualification, gestion des objections, battle cards. Vous savez exactement quoi dire quand un prospect répond.",
                 badge: "Phase 2",
             },
             {
@@ -229,7 +229,7 @@ export const siteConfig = {
                 icon: "file-text",
                 title: "Documentation + Transmission",
                 description:
-                    "SOPs complètes, formation de votre équipe, handoff documenté. Le système vous appartient. Pas d'abonnement, pas de dépendance.",
+                    "SOPs complètes, formation, handoff documenté. Le système vous appartient. Pas d'abonnement, pas de dépendance.",
                 badge: "Phase 3",
                 span: 3,
             },
@@ -249,21 +249,21 @@ export const siteConfig = {
                 title: "Architecture",
                 subtitle: "Jours 1 à 3",
                 description:
-                    "Diagnostic de votre offre, mapping de votre client idéal, design du système complet. On pose les fondations.",
+                    "On pose les fondations ensemble : diagnostic de votre offre, mapping de votre client idéal, design du système complet.",
             },
             {
                 number: "02",
                 title: "Construction",
                 subtitle: "Jours 3 à 10",
                 description:
-                    "Base de données, infrastructure email, séquences multicanal, pipeline CRM, frameworks de vente. Le système prend forme.",
+                    "Base de données qualifiée, infrastructure email, séquences multicanal, pipeline CRM, scripts de vente. Le système prend forme.",
             },
             {
                 number: "03",
                 title: "Lancement",
                 subtitle: "Jours 10 à 14",
                 description:
-                    "Pilote terrain, ajustements en temps réel, premiers signaux. Votre système est en production.",
+                    "Pilote terrain, ajustements en temps réel, premiers rendez-vous. Votre système est en production.",
             },
             {
                 number: "04",
@@ -282,8 +282,8 @@ export const siteConfig = {
         highlightedText: "En L'Air",
         paragraphs: [
             "Je ne promets pas \"100 clients en 30 jours.\" Ce serait malhonnête.",
-            "Ma méthode est simple : on pense votre système de vente ensemble, je le construis, le teste sur le terrain, et je vous le livre opérationnel. Pas de commission mensuelle, pas d'abonnement. Le budget est discuté ensemble directement.",
-            "Mon background de développeur (10+ ans) me permet de garantir des systèmes techniquement robustes : scraping, enrichissement, scoring IA, automatisations. Ce n'est pas du conseil abstrait. C'est de l'exécution.",
+            "Ma méthode est simple : on pense votre système d'acquisition ensemble, je le construis, je le teste sur le terrain, et je vous le livre opérationnel. Pas de commission mensuelle, pas d'abonnement. Le budget est discuté ensemble directement.",
+            "Mon background de développeur (10+ ans) me permet de construire des systèmes techniquement solides : scraping, enrichissement, scoring, automatisations. Ce n'est pas du conseil. C'est de l'exécution.",
             "12+ systèmes installés. 100K+ € closés personnellement. 500K+ € de pipeline générés pour mes clients.",
         ],
         signature: { name: "Bilal EL-JINDI", role: "Fondateur, Path2Revenue", linkedin: "https://linkedin.com/in/beljindi" },
@@ -297,7 +297,7 @@ export const siteConfig = {
         subtitle:
             "30 minutes pour comprendre votre situation et identifier vos leviers de croissance. Pas de pitch, un échange honnête.",
         benefits: [
-            "Analyse de votre offre et de votre prospection actuelle",
+            "Analyse de votre offre et de votre acquisition actuelle",
             "Identification de vos principaux leviers de croissance",
             "Recommandations concrètes et actionnables",
             "Transparence totale, pas de pitch",
@@ -314,7 +314,7 @@ export const siteConfig = {
         items: [
             {
                 q: "C'est pour qui ?",
-                a: "PME B2B, freelances confirmés, agences, cabinets de conseil et fondateurs SaaS. Bref : vous avez une offre qui marche, mais votre acquisition repose sur du bricolage manuel ou un réseau qui s'épuise.",
+                a: "Pour ceux qui vendent déjà en B2B mais dont l'acquisition dépend du réseau, du bouche-à-oreille ou d'un seul canal non maîtrisé. Fondateurs, consultants, freelances experts, dirigeants de petites structures. Vous savez délivrer, il vous manque le système pour remplir votre pipe de manière prévisible.",
             },
             {
                 q: "Combien ça coûte ?",
@@ -322,7 +322,7 @@ export const siteConfig = {
             },
             {
                 q: "Qu'est-ce qui est inclus ?",
-                a: "Diagnostic de l'offre, mapping ICP, base de données enrichie et scorée, infrastructure email, séquences multicanal, approches cold call, pipeline CRM, documentation complète, formation et 30 jours de support.",
+                a: "Définition de votre client idéal, base de données enrichie et scorée, infrastructure email, séquences multicanal, scripts de prospection et closing, pipeline CRM, documentation complète, formation et 30 jours de support.",
             },
             {
                 q: "En combien de temps c'est opérationnel ?",
@@ -330,11 +330,11 @@ export const siteConfig = {
             },
             {
                 q: "Quelle est la différence avec une agence ?",
-                a: "Une agence facture au mois et garde le système. De mon côté, je construis votre machine sur-mesure avec vous, je vous la livre, et je n'interfère plus. Pas d'abonnement, pas de dépendance.",
+                a: "Une agence facture au mois et garde le système. Moi, je construis votre machine sur mesure, je vous la livre, et je m'efface. Pas d'abonnement, pas de dépendance. Le système vous appartient.",
             },
             {
-                q: "Et si j'ai déjà un CRM ?",
-                a: "Le système est construit sur mesure, adapté à vos outils existants. On ne remplace pas ce qui fonctionne.",
+                q: "J'ai déjà essayé de prospecter, ça n'a rien donné.",
+                a: "C'est normal si vous n'aviez pas de process, pas de données qualifiées et pas de cadence. Ce que je construis c'est un système complet et documenté, pas un test à l'aveugle.",
             },
             {
                 q: "Et après la livraison ?",
@@ -346,11 +346,11 @@ export const siteConfig = {
     /* ─────────────────── FINAL CTA ─────────────────── */
     finalCTA: {
         eyebrow: "Chaque jour sans système, \nce sont des clients que vous ne rencontrez pas.",
-        headline: "Votre Système de Vente",
+        headline: "Votre Système d'Acquisition",
         highlightedText: "Vous Attend",
         headlineEnd: "",
         subtitle:
-            "30 minutes de diagnostic pour savoir si votre offre est prête. Pas de pitch. Un échange honnête.",
+            "30 minutes de diagnostic pour savoir où vous en êtes. Pas de pitch. Un échange honnête.",
         ctas: [
             {
                 text: "Réserver Mon Diagnostic Gratuit",
@@ -372,7 +372,7 @@ export const siteConfig = {
     footer: {
         brand: "Path2Revenue",
         logo: "/logo.svg",
-        tagline: "Votre système de vente, clé en main.",
+        tagline: "Votre système d'acquisition, clé en main.",
         links: [
             { label: "Problème", href: "#probleme" },
             { label: "Système", href: "#services" },

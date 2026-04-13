@@ -41,27 +41,29 @@ export default function Results() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-gradient-from)]/5 to-[var(--color-gradient-to)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                            {/* Metric callout */}
-                            <div className="flex items-center gap-3 mb-6 relative z-10 w-full justify-between">
-                                <span className="text-2xl font-extrabold tracking-tight text-[var(--color-text-primary)] group-hover:bg-gradient-to-r group-hover:from-[var(--color-gradient-from)] group-hover:to-[var(--color-gradient-to)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                                    {item.metric}
-                                </span>
+                            <div className="relative z-10 flex flex-col flex-1">
+                                {/* Row: dot icon + badge tag — horizontal */}
                                 {item.badge && (
-                                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--color-bg-surface)] border border-[var(--color-border-hover)] group-hover:border-[var(--color-accent)]/30 ${badgeRadius} text-[10px] uppercase tracking-wider text-[var(--color-text-muted)] group-hover:text-[var(--color-text-primary)] transition-all duration-300 font-medium shadow-sm shrink-0`}>
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] group-hover:animate-pulse" />
-                                        {item.badge}
+                                    <div className="flex items-center gap-2.5 mb-5">
+                                        <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-accent)] group-hover:animate-pulse shrink-0" />
+                                        <span className={`text-[11px] uppercase tracking-wider font-semibold text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)] transition-colors duration-300`}>
+                                            {item.badge}
+                                        </span>
                                     </div>
                                 )}
-                            </div>
 
-                            <div className="relative z-10 flex flex-col flex-1">
-                                {/* Label */}
-                                <h3 className="text-base font-bold text-[var(--color-text-primary)] mb-3 leading-snug group-hover:text-[var(--color-text-primary)] transition-colors duration-300">
-                                    {item.label}
+                                {/* Metric title — below */}
+                                <h3 className="text-xl font-extrabold tracking-tight text-[var(--color-text-primary)] group-hover:bg-gradient-to-r group-hover:from-[var(--color-gradient-from)] group-hover:to-[var(--color-gradient-to)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 mb-2 leading-snug">
+                                    {item.metric}
                                 </h3>
 
+                                {/* Label */}
+                                <p className="text-sm font-medium text-[var(--color-text-secondary)] mb-3 leading-snug">
+                                    {item.label}
+                                </p>
+
                                 {/* Description */}
-                                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed group-hover:text-[var(--color-text-primary)] transition-colors duration-300 mt-auto">
+                                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed group-hover:text-[var(--color-text-secondary)] transition-colors duration-300 mt-auto">
                                     {item.description}
                                 </p>
                             </div>
