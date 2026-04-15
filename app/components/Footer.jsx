@@ -1,8 +1,11 @@
-import { siteConfig } from "@/site.config";
+"use client";
+
+import { useConfig } from "@/lib/use-config";
 import { Linkedin } from "lucide-react";
 
 export default function Footer() {
-    const { footer } = siteConfig;
+    const { footer, lang, setLang } = useConfig();
+    const toggleLang = () => setLang(lang === "fr" ? "en" : "fr");
 
     return (
         <footer className="border-t border-[var(--color-border-default)] bg-[var(--color-bg-surface)]/30">
@@ -30,17 +33,31 @@ export default function Footer() {
                 {/* Bottom */}
                 <div className="mt-8 pt-6 border-t border-[var(--color-border-default)] flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-[var(--color-text-muted)]">{footer.legal}</p>
-                    {footer.socials?.length > 0 && (
-                        <div className="flex gap-4">
-                            {footer.socials.map((s, i) => (
-                                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[#0077b5] transition-colors" aria-label={s.platform}>
-                                    {s.platform === 'linkedin' ? <Linkedin className="w-5 h-5" /> : s.platform}
-                                </a>
-                            ))}
-                        </div>
-                    )}
+
+                    <div className="flex items-center gap-4">
+                        {/* Language toggle */}
+                        <button
+                            onClick={toggleLang}
+                            className="text-xs font-medium px-2.5 py-1 rounded-md border border-[var(--color-border-default)] text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] hover:border-[var(--color-accent)] transition-all cursor-pointer"
+                            aria-label={lang === "fr" ? "Switch to English" : "Passer en français"}
+                        >
+                            {lang === "fr" ? "🇬🇧 EN" : "🇫🇷 FR"}
+                        </button>
+
+                        {/* Socials */}
+                        {footer.socials?.length > 0 && (
+                            <>
+                                {footer.socials.map((s, i) => (
+                                    <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[#0077b5] transition-colors" aria-label={s.platform}>
+                                        {s.platform === 'linkedin' ? <Linkedin className="w-5 h-5" /> : s.platform}
+                                    </a>
+                                ))}
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </footer>
     );
 }
+

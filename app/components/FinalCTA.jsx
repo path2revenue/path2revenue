@@ -1,14 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/site.config";
-
-const layout = siteConfig.design?.layout || "centered";
-const btnRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-full";
-
-function resolveHref(href) {
-    return href === "__whatsapp__" ? siteConfig.links.whatsapp : href;
-}
+import { useConfig } from "@/lib/use-config";
 
 const WhatsAppIcon = () => (
     <svg className="w-5 h-5 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
@@ -17,9 +10,15 @@ const WhatsAppIcon = () => (
 );
 
 export default function FinalCTA() {
-    const { finalCTA: data } = siteConfig;
+    const { finalCTA: data, links, design } = useConfig();
+    const layout = design?.layout || "centered";
+    const btnRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-full";
     const [visible, setVisible] = useState(false);
     const ref = useRef(null);
+
+    function resolveHref(href) {
+        return href === "__whatsapp__" ? links.whatsapp : href;
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold: 0.2 });

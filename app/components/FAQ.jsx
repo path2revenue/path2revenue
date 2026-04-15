@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 
 export default function FAQ() {
-    const { faq: data } = siteConfig;
+    const { faq: data } = useConfig();
     const [open, setOpen] = useState(null);
     const [visible, setVisible] = useState(false);
     const ref = useRef(null);

@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 import SectionHeader from "./SectionHeader";
 
-const layout = siteConfig.design?.layout || "centered";
-const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
-
 export default function Process() {
-    const { process: data } = siteConfig;
+    const { process: data, design } = useConfig();
+    const layout = design?.layout || "centered";
+    const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
     const [vis, setVis] = useState([]);
     const refs = useRef([]);
 

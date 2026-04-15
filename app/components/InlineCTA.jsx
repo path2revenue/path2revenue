@@ -1,14 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/site.config";
-
-const layout = siteConfig.design?.layout || "centered";
-const btnRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-full";
-
-function resolveHref(href) {
-    return href === "__whatsapp__" ? siteConfig.links.whatsapp : href;
-}
+import { useConfig } from "@/lib/use-config";
 
 const WhatsAppIcon = () => (
     <svg className="w-5 h-5 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
@@ -18,14 +11,21 @@ const WhatsAppIcon = () => (
 
 /**
  * InlineCTA — Lightweight intermediate call-to-action banner.
- * Reads its config from siteConfig.inlineCTAs[variant].
+ * Reads its config from config.inlineCTAs[variant].
  * 
  * Usage in sections order: "inlineCTA1", "inlineCTA2"
  */
 export default function InlineCTA({ variant = "1" }) {
-    const data = siteConfig.inlineCTAs?.[variant];
+    const { inlineCTAs, links, design } = useConfig();
+    const data = inlineCTAs?.[variant];
+    const layout = design?.layout || "centered";
+    const btnRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-full";
     const [visible, setVisible] = useState(false);
     const ref = useRef(null);
+
+    function resolveHref(href) {
+        return href === "__whatsapp__" ? links.whatsapp : href;
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver(

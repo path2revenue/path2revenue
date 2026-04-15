@@ -1,22 +1,25 @@
 "use client";
 
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 
 export default function MentionsLegales() {
+    const { navbar, lang } = useConfig();
+    const backText = lang === "fr" ? "← Retour au site" : "← Back to site";
+
     return (
         <>
             {/* Minimal Navbar */}
             <nav className="sticky top-0 z-50 border-b border-[var(--color-border-default)] bg-[var(--color-bg-primary)]/90 backdrop-blur-md">
                 <div className="max-w-[1100px] mx-auto px-6 h-14 flex items-center justify-between">
                     <a href="/" className="flex items-center gap-2 text-lg font-bold">
-                        <span>{siteConfig.navbar?.logo?.emoji}</span>
-                        <span>{siteConfig.navbar?.logo?.text || siteConfig.footer?.brand}</span>
+                        <span>{navbar?.logo?.emoji}</span>
+                        <span>{navbar?.logo?.text}</span>
                     </a>
                     <a
                         href="/"
                         className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
                     >
-                        ← Retour au site
+                        {backText}
                     </a>
                 </div>
             </nav>
@@ -159,10 +162,11 @@ export default function MentionsLegales() {
                         href="/"
                         className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
                     >
-                        ← Retour au site
+                        {backText}
                     </a>
                 </div>
             </main>
         </>
     );
 }
+

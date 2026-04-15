@@ -1,38 +1,26 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { siteConfig } from "@/site.config";
-import LucideIcon from "./LucideIcon";
+import { useEffect, useRef, useState } from "react";
+import { useConfig } from "@/lib/use-config";
 import SectionHeader from "./SectionHeader";
-
-const layout = siteConfig.design?.layout || "centered";
-const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
-const gridCols = layout === "editorial" ? "md:grid-cols-2" : "md:grid-cols-2";
-const badgeRadius = layout === "editorial" ? "rounded-md" : "rounded-full";
+import LucideIcon from "./LucideIcon";
 
 export default function PainPoints() {
-    const { painPoints: data } = siteConfig;
-    const [visibleCards, setVisibleCards] = useState([]);
-    const refs = useRef([]);
+    const { painPoints: data, design } = useConfig();
+    const layout = design?.layout || "centered";
+    const [visible, setVisible] = useState(false);
+    const ref = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const idx = refs.current.indexOf(entry.target);
-                        if (idx !== -1) setVisibleCards((prev) => [...new Set([...prev, idx])]);
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-        refs.current.forEach((el) => el && observer.observe(el));
+        const observer = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold: 0.15 });
+        if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
     }, []);
 
+    const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
+
     return (
-        <section id="probleme" className="py-16 px-6">
+        <section id="probleme" ref={ref} className="py-16 px-6">
             <div className="max-w-[1200px] mx-auto">
                 <SectionHeader
                     eyebrow={data.eyebrow}
@@ -40,51 +28,27 @@ export default function PainPoints() {
                     highlightedText={data.highlightedText}
                     subtitle={data.subtitle}
                 />
-
-                <div className={`grid ${gridCols} gap-6`}>
-                    {data.items.map((pain, i) => (
+                <div className="grid md:grid-cols-2 gap-5">
+                    {data.items.map((item, i) => (
                         <div
                             key={i}
-                            ref={(el) => (refs.current[i] = el)}
-                            className={`relative bg-[var(--color-bg-card)] border border-[var(--color-border-default)] ${cardRadius} p-7 hover:border-[var(--color-accent)]/30 hover:shadow-2xl hover:shadow-[var(--color-accent-glow)] transition-all duration-500 cursor-pointer group flex flex-col justify-between overflow-hidden ${visibleCards.includes(i) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                                }`}
-                            style={{ transitionDelay: `${i * 150}ms` }}
+                            className={`bg-[var(--color-bg-card)] border border-[var(--color-border-default)] ${cardRadius} p-6 hover:border-[var(--color-accent)]/30 transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+                            style={{ transitionDelay: `${i * 100}ms` }}
                         >
-                            {/* Dégradé doux de fond au survol */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-gradient-from)]/5 to-[var(--color-gradient-to)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-                            {layout === "editorial" || layout === "minimal" ? (
-                                <div className="flex items-start gap-5 relative z-10">
-                                    <div className="w-12 h-12 rounded-2xl bg-[var(--color-bg-primary)] border border-[var(--color-border-hover)] group-hover:border-[var(--color-accent)]/40 flex items-center justify-center shrink-0 transition-colors duration-300 shadow-sm">
-                                        <LucideIcon name={pain.icon} size={22} className="text-[var(--color-text-secondary)] group-hover:text-[var(--color-accent)] transition-all duration-300 group-hover:scale-110" />
-                                    </div>
-                                    <div className="flex flex-col h-full">
-                                        <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-2 leading-snug group-hover:bg-gradient-to-r group-hover:from-[var(--color-gradient-from)] group-hover:to-[var(--color-gradient-to)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{pain.title}</h3>
-                                        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-5 group-hover:text-[var(--color-text-primary)] transition-colors duration-300">{pain.description}</p>
-                                        <div className="mt-auto">
-                                            <div className={`inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--color-bg-surface)] border border-[var(--color-border-hover)] group-hover:border-[var(--color-accent)]/30 ${badgeRadius} text-xs text-[var(--color-text-muted)] group-hover:text-[var(--color-text-primary)] transition-all duration-300 font-medium shadow-sm`}>
-                                                <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] group-hover:animate-pulse" />
-                                                {pain.stat}
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                                    <LucideIcon name={item.icon} size={20} className="text-[var(--color-accent)]" />
                                 </div>
-                            ) : (
-                                <div className="relative z-10 flex flex-col h-full">
-                                    <div className="w-14 h-14 rounded-2xl bg-[var(--color-bg-primary)] border border-[var(--color-border-hover)] group-hover:border-[var(--color-accent)]/40 flex items-center justify-center mb-6 transition-colors duration-300 shadow-sm">
-                                        <LucideIcon name={pain.icon} size={24} className="text-[var(--color-text-secondary)] group-hover:text-[var(--color-accent)] transition-all duration-300 group-hover:scale-110" />
-                                    </div>
-                                    <h3 className="text-xl font-bold mb-3 leading-snug text-[var(--color-text-primary)] group-hover:bg-gradient-to-r group-hover:from-[var(--color-gradient-from)] group-hover:to-[var(--color-gradient-to)] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{pain.title}</h3>
-                                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-6 group-hover:text-[var(--color-text-primary)] transition-colors duration-300">{pain.description}</p>
-                                    
-                                    <div className="mt-auto pt-2">
-                                        <div className={`inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--color-bg-surface)] border border-[var(--color-border-hover)] group-hover:border-[var(--color-accent)]/30 ${badgeRadius} text-xs text-[var(--color-text-muted)] group-hover:text-[var(--color-text-primary)] transition-all duration-300 font-medium shadow-sm`}>
-                                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] group-hover:animate-pulse" />
-                                            {pain.stat}
-                                        </div>
-                                    </div>
+                                <div>
+                                    <h3 className="font-bold text-[var(--color-text-primary)] mb-2">{item.title}</h3>
+                                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{item.description}</p>
+                                    {item.stat && (
+                                        <span className="inline-block mt-3 text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/8 px-2.5 py-1 rounded-full">
+                                            {item.stat}
+                                        </span>
+                                    )}
                                 </div>
-                            )}
+                            </div>
                         </div>
                     ))}
                 </div>

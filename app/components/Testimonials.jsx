@@ -1,16 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 import SectionHeader from "./SectionHeader";
-
-const layout = siteConfig.design?.layout || "centered";
-const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
 
 /* ═══════════════════════════════════════════
    CENTERED — card grid with navigation arrows
    ═══════════════════════════════════════════ */
-function TestimonialsCentered({ data }) {
+function TestimonialsCentered({ data, cardRadius }) {
     const [page, setPage] = useState(0);
     const perPage = 3;
     const pages = Math.ceil(data.items.length / perPage);
@@ -43,8 +40,8 @@ function TestimonialsCentered({ data }) {
             </div>
             {pages > 1 && (
                 <div className="flex justify-center gap-3">
-                    <button onClick={() => setPage((p) => Math.max(0, p - 1))} className="w-10 h-10 rounded-full border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] transition cursor-pointer" aria-label="Précédent">←</button>
-                    <button onClick={() => setPage((p) => Math.min(pages - 1, p + 1))} className="w-10 h-10 rounded-full border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] transition cursor-pointer" aria-label="Suivant">→</button>
+                    <button onClick={() => setPage((p) => Math.max(0, p - 1))} className="w-10 h-10 rounded-full border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] transition cursor-pointer" aria-label="Previous">←</button>
+                    <button onClick={() => setPage((p) => Math.min(pages - 1, p + 1))} className="w-10 h-10 rounded-full border border-[var(--color-border-default)] flex items-center justify-center text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] transition cursor-pointer" aria-label="Next">→</button>
                 </div>
             )}
         </>
@@ -104,7 +101,9 @@ function TestimonialsMinimal({ data }) {
 }
 
 export default function Testimonials() {
-    const { testimonials: data } = siteConfig;
+    const { testimonials: data, design } = useConfig();
+    const layout = design?.layout || "centered";
+    const cardRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-2xl";
 
     return (
         <section className="py-16 px-6 bg-[var(--color-bg-surface)]/30">
@@ -117,7 +116,7 @@ export default function Testimonials() {
                 />
                 {layout === "editorial" ? <TestimonialsEditorial data={data} />
                     : layout === "minimal" ? <TestimonialsMinimal data={data} />
-                        : <TestimonialsCentered data={data} />}
+                        : <TestimonialsCentered data={data} cardRadius={cardRadius} />}
             </div>
         </section>
     );

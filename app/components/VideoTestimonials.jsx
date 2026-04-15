@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 
 export default function VideoTestimonials() {
-    const { videoTestimonials: data } = siteConfig;
+    const { videoTestimonials: data } = useConfig();
     const [visible, setVisible] = useState(false);
     const ref = useRef(null);
 

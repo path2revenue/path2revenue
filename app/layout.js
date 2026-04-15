@@ -1,7 +1,10 @@
 import "./globals.css";
 import { siteConfig } from "@/site.config";
+import { Providers } from "./providers";
 
-const { meta, design } = siteConfig;
+// Use FR meta for SSR/SEO (canonical default)
+const meta = siteConfig.fr.meta;
+const design = siteConfig.fr.design;
 
 export const metadata = {
   title: meta.title,
@@ -11,7 +14,7 @@ export const metadata = {
     title: meta.ogTitle || meta.title,
     description: meta.ogDescription || meta.description,
     images: meta.ogImage ? [meta.ogImage] : [],
-    locale: meta.lang || "fr",
+    locale: "fr",
     type: "website",
   },
   icons: {
@@ -28,7 +31,7 @@ const fontUrl = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(d
 
 export default function RootLayout({ children }) {
   return (
-    <html lang={meta.lang || "fr"} data-palette={design.palette}>
+    <html lang="fr" data-palette={design.palette}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -38,7 +41,7 @@ export default function RootLayout({ children }) {
         className="antialiased"
         style={{ fontFamily: `'${design.fontBody}', sans-serif` }}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

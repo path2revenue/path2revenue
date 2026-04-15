@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 import { Linkedin } from "lucide-react";
 
 export default function Honesty() {
-    const { honesty: data } = siteConfig;
+    const { honesty: data } = useConfig();
     const [visible, setVisible] = useState(false);
     const ref = useRef(null);
 

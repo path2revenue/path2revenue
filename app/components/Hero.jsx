@@ -1,10 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 import { Target, Mail, Rocket, Database, TrendingUp, Users, Zap, LineChart } from "lucide-react";
-
-const layout = siteConfig.design?.layout || "centered";
 
 function AnimatedCounter({ target, suffix = "", duration = 2000 }) {
     const [count, setCount] = useState(0);
@@ -46,18 +44,19 @@ const WhatsAppIcon = () => (
     </svg>
 );
 
-function resolveHref(href) {
-    if (href === "__whatsapp__") return siteConfig.links.whatsapp;
+function resolveHref(href, links) {
+    if (href === "__whatsapp__") return links.whatsapp;
     return href;
 }
 
-const btnRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-full";
+
 
 /* ─── SHARED: CTA Button ─── */
-function CTAButton({ cta }) {
+function CTAButton({ cta, links, layout }) {
+    const btnRadius = layout === "editorial" ? "rounded-xl" : layout === "minimal" ? "rounded-lg" : "rounded-full";
     return (
         <a
-            href={resolveHref(cta.href)}
+            href={resolveHref(cta.href, links)}
             target={cta.href === "__whatsapp__" ? "_blank" : undefined}
             rel={cta.href === "__whatsapp__" ? "noopener noreferrer" : undefined}
             className={
@@ -76,7 +75,7 @@ function CTAButton({ cta }) {
 /* ═══════════════════════════════════════════
    LAYOUT: CENTERED (classic — StarsBridge style)
    ═══════════════════════════════════════════ */
-function HeroCentered({ hero }) {
+function HeroCentered({ hero, links, layout }) {
     return (
         <section className="relative flex flex-col items-center justify-center overflow-hidden pt-24 pb-16">
             <MeshBG />
@@ -91,7 +90,7 @@ function HeroCentered({ hero }) {
                 <Sub html={hero.subheadline} center />
                 <VSL url={hero.vslUrl} title={hero.vslTitle} />
                 <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 animate-[fadeInUp_1.1s_ease-out]">
-                    {hero.ctas.map((cta, i) => <CTAButton key={i} cta={cta} />)}
+                    {hero.ctas.map((cta, i) => <CTAButton key={i} cta={cta} links={links} layout={layout} />)}
                 </div>
                 <Stats stats={hero.stats} />
                 <TrustBadges badges={hero.trustBadges} />
@@ -103,7 +102,7 @@ function HeroCentered({ hero }) {
 /* ═══════════════════════════════════════════
    LAYOUT: EDITORIAL (Reitere style — left-aligned, split)
    ═══════════════════════════════════════════ */
-function HeroEditorial({ hero }) {
+function HeroEditorial({ hero, links, layout }) {
     return (
         <section className="relative overflow-hidden pt-24 pb-16">
             <MeshBG />
@@ -120,7 +119,7 @@ function HeroEditorial({ hero }) {
                         </h1>
                         <Sub html={hero.subheadline} />
                         <div className="flex flex-col sm:flex-row items-start gap-4 mt-8 animate-[fadeInUp_1.1s_ease-out]">
-                            {hero.ctas.map((cta, i) => <CTAButton key={i} cta={cta} />)}
+                            {hero.ctas.map((cta, i) => <CTAButton key={i} cta={cta} links={links} layout={layout} />)}
                         </div>
                     </div>
                     {/* RIGHT: Video */}
@@ -136,7 +135,7 @@ function HeroEditorial({ hero }) {
 /* ═══════════════════════════════════════════
    LAYOUT: MINIMAL (clean, airy, single-column)
    ═══════════════════════════════════════════ */
-function HeroMinimal({ hero }) {
+function HeroMinimal({ hero, links, layout }) {
     return (
         <section className="relative overflow-hidden pt-20 pb-20">
             <MeshBG />
@@ -150,7 +149,7 @@ function HeroMinimal({ hero }) {
                 </h1>
                 <Sub html={hero.subheadline} />
                 <div className="flex flex-col sm:flex-row items-start gap-4 mt-8 mb-12 animate-[fadeInUp_1.1s_ease-out]">
-                    {hero.ctas.map((cta, i) => <CTAButton key={i} cta={cta} />)}
+                    {hero.ctas.map((cta, i) => <CTAButton key={i} cta={cta} links={links} layout={layout} />)}
                 </div>
                 <VSL url={hero.vslUrl} title={hero.vslTitle} />
                 <Stats stats={hero.stats} border />
@@ -303,8 +302,9 @@ function TrustBadges({ badges }) {
 
 /* ─── EXPORT: pick layout ─── */
 export default function Hero() {
-    const { hero } = siteConfig;
-    if (layout === "editorial") return <HeroEditorial hero={hero} />;
-    if (layout === "minimal") return <HeroMinimal hero={hero} />;
-    return <HeroCentered hero={hero} />;
+    const { hero, links, design } = useConfig();
+    const layout = design?.layout || "centered";
+    if (layout === "editorial") return <HeroEditorial hero={hero} links={links} layout={layout} />;
+    if (layout === "minimal") return <HeroMinimal hero={hero} links={links} layout={layout} />;
+    return <HeroCentered hero={hero} links={links} layout={layout} />;
 }

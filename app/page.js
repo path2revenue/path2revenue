@@ -1,4 +1,6 @@
-import { siteConfig } from "@/site.config";
+"use client";
+
+import { useConfig } from "@/lib/use-config";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
@@ -34,11 +36,13 @@ const SECTION_MAP = {
 };
 
 export default function Home() {
+  const { sections } = useConfig();
+
   return (
     <>
       <Navbar />
       <main>
-        {siteConfig.sections.map((key) => {
+        {sections.map((key) => {
           const Component = SECTION_MAP[key];
           if (!Component) return null;
           return <Component key={key} />;

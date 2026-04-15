@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * SectionHeader — Renders section header based on layout variant.
  *
@@ -16,11 +18,11 @@
  * @param {boolean} [props.gradient]   – use gradient on highlighted text (default: true)
  */
 
-import { siteConfig } from "@/site.config";
-
-const layout = siteConfig.design?.layout || "centered";
+import { useConfig } from "@/lib/use-config";
 
 export default function SectionHeader({ eyebrow, headline, highlightedText, headlineEnd, subtitle, accentColor, gradient = true }) {
+    const { design } = useConfig();
+    const layout = design?.layout || "centered";
     const accent = accentColor || "var(--color-accent)";
 
     const highlightEl = gradient ? (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/site.config";
+import { useConfig } from "@/lib/use-config";
 
 const WhatsAppIcon = () => (
     <svg className="w-5 h-5 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
@@ -10,7 +10,7 @@ const WhatsAppIcon = () => (
 );
 
 export default function Calendar() {
-    const { calendar: data, links } = siteConfig;
+    const { calendar: data, links } = useConfig();
     const [visible, setVisible] = useState(false);
     const ref = useRef(null);
 
