@@ -1,6 +1,7 @@
 import "./globals.css";
 import { siteConfig } from "@/site.config";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/next";
 
 // Use FR meta for SSR/SEO (canonical default)
 const meta = siteConfig.fr.meta;
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         style={{ fontFamily: `'${design.fontBody}', sans-serif` }}
       >
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
