@@ -42,11 +42,11 @@ export default function Services() {
                                 <div className="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
                                     <LucideIcon name={item.icon} size={20} className="text-[var(--color-accent)]" />
                                 </div>
-                                <div>
-                                    <div className="flex items-center gap-2 mb-2">
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex items-start justify-between gap-3 mb-2">
                                         <h3 className="font-bold text-[var(--color-text-primary)]">{item.title}</h3>
                                         {item.badge && (
-                                            <span className="text-[10px] font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/8 px-2 py-0.5 rounded-full">
+                                            <span className="text-[10px] font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/8 px-2 py-0.5 rounded-full shrink-0 whitespace-nowrap mt-0.5">
                                                 {item.badge}
                                             </span>
                                         )}
