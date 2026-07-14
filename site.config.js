@@ -104,7 +104,6 @@ const fr = {
             { text: "SprintMob", image: "/sprintmob.png", description: "Système de prospection 100% automatisé" },
             { text: "Novashield", image: "/logo_novashield_black.svg", description: "Conseil d'acquisition" },
             { text: "Programme Réitère", image: "/imrane.png", description: "Closing B2B sur offres High-Ticket" },
-            { text: "StarsBridgeSystem", image: "/starsbridgesystem.png", description: "Structuration CRM et pipelines" },
         ],
     },
     painPoints: {
@@ -356,7 +355,6 @@ const en = {
             { text: "SprintMob", image: "/sprintmob.png", description: "Fully automated prospecting system" },
             { text: "Novashield", image: "/logo_novashield_black.svg", description: "Acquisition consulting" },
             { text: "Programme Réitère", image: "/imrane.png", description: "B2B closing on high-ticket offers" },
-            { text: "StarsBridgeSystem", image: "/starsbridgesystem.png", description: "CRM and pipeline structuring" },
         ],
     },
     painPoints: {

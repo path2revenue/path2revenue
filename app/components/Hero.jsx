@@ -73,7 +73,7 @@ function CTAButton({ cta, links, layout }) {
 }
 
 /* ═══════════════════════════════════════════
-   LAYOUT: CENTERED (classic — StarsBridge style)
+   LAYOUT: CENTERED (classic — Centered style)
    ═══════════════════════════════════════════ */
 function HeroCentered({ hero, links, layout }) {
     return (

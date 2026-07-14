@@ -215,7 +215,7 @@ export default function OffreAhmed() {
     const today = new Date();
     const validUntil = new Date(today);
     validUntil.setDate(validUntil.getDate() + validDays);
-    const devisNumber = `SBS-${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(today.getDate()).padStart(2, "0")}-${String(Math.floor(Math.random() * 900) + 100)}`;
+    const devisNumber = `P2R-${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(today.getDate()).padStart(2, "0")}-${String(Math.floor(Math.random() * 900) + 100)}`;
 
     const handlePrint = () => window.print();
 
@@ -253,7 +253,7 @@ export default function OffreAhmed() {
                     <div className="flex items-start justify-between mb-12 pb-8 border-b-2 border-[#3B82F6]">
                         <div>
                             <div className="text-2xl font-bold text-[#0C111D]" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                                Stars<span className="text-[#3B82F6]">Bridge</span>System
+                                Path2<span className="text-[#3B82F6]">Revenue</span>
                             </div>
                             <div className="flex items-center gap-2 mt-1">
                                 <span className="text-xs text-[#64748B]">Agency · Digital Growth Partner</span>
@@ -357,7 +357,7 @@ export default function OffreAhmed() {
                         {/* Signature */}
                         <div className="grid grid-cols-2 gap-8 mt-12 pt-8 border-t border-[#E2E8F0]">
                             <div>
-                                <div className="text-xs text-[#64748B] uppercase tracking-wider mb-8">Signature StarsBridgeSystem</div>
+                                <div className="text-xs text-[#64748B] uppercase tracking-wider mb-8">Signature Path2Revenue</div>
                                 <div className="border-b border-[#CBD5E1] w-48" />
                             </div>
                             <div>
@@ -369,7 +369,7 @@ export default function OffreAhmed() {
 
                     {/* Footer */}
                     <div className="mt-16 pt-6 border-t border-[#E2E8F0] text-center text-xs text-[#94A3B8]">
-                        StarsBridgeSystem · Agency · Digital Growth Partner
+                        Path2Revenue · Digital Growth Partner
                     </div>
                 </div>
             </div>
@@ -518,7 +518,7 @@ export default function OffreAhmed() {
                 <div className="max-w-[1100px] mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <span className="text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                            SBS <span className="text-[#3B82F6]">×</span> Path2Revenue
+                            Path2Revenue
                         </span>
                         <span className="text-[10px] bg-[#F59E0B]/15 text-[#F59E0B] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">{V0_LABEL}</span>
                         <span className="text-xs text-[#475569] ml-2">Configurateur de Devis</span>

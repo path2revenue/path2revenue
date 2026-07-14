@@ -35,7 +35,7 @@ Before writing a single line of config, gather ALL of the following. Nothing sho
 
 | Field | Description | Example |
 |-------|-------------|---------|
-| **Name** | Product/service name | "StarsBridgeSystem" |
+| **Name** | Product/service name | "Path2Revenue" |
 | **Tagline** | One-line value proposition | "Systèmes d'acquisition éthiques" |
 | **Deliverables** | What they get (3-7 items) | "Publicité, funnels, VSL, CRM, closing" |
 | **Price** | Price or "Sur devis" | "Sur devis" |
